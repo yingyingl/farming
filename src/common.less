@@ -18,9 +18,13 @@ ul, li {
   list-style: none;
 }
 
+html, body, #app {
+  height: 100%;
+}
+
 body {
   font-size: 14px;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: '微软雅黑', Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -43,6 +47,10 @@ body {
   .widthPercentLoop(@index + 10);
 }
 .widthPercentLoop(10);
+
+.max-width {
+  max-width: 1400px;
+}
 
 /* height persent */
 .heightPercentLoop(@index) when (@index <= 100) {

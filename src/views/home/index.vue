@@ -1,5 +1,6 @@
 <template>
-  dsfds
+  <p v-for="item in 10" :key="item">sdfsd</p>>
 </template>
 
-<script setup></script>
+<script setup>
+</script>
