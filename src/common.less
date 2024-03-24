@@ -1,0 +1,225 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+input, button {
+  border: 0;
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+}
+ul, li {
+  list-style: none;
+}
+
+body {
+  font-size: 14px;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* cursor */
+.cursor-pointer, .pointer { cursor: pointer !important; }
+.cursor-wait { cursor: wait !important; }
+.cursor-default { cursor: default !important; }
+
+/* user-select */
+.user-select-text { user-select: text !important; }
+
+/* width persent */
+.widthPercentLoop(@index) when (@index <= 100) {
+  .w-p-@{index} {
+    width: @index + 0% !important;
+  }
+  
+  .widthPercentLoop(@index + 10);
+}
+.widthPercentLoop(10);
+
+/* height persent */
+.heightPercentLoop(@index) when (@index <= 100) {
+  .h-p-@{index} {
+    height: @index + 0% !important;
+  }
+  
+  .heightPercentLoop(@index + 10);
+}
+.heightPercentLoop(10);
+
+
+/* text-align */
+@textAlign: left, center, right;
+.textAlignLoop(@index) when(@index > 0) {
+  @t: extract(@textAlign, @index);
+  .t-@{t} {
+    text-align: @t !important;
+  }
+  .textAlignLoop(@index - 1);
+}
+.textAlignLoop(length(@textAlign));
+
+
+/* font-size */
+.fontSizeLoop(@index) when (@index <= 40) {
+  .font-@{index} {
+    font-size: @index + 0px !important;
+  }
+  
+  .fontSizeLoop(@index + 2);
+}
+.fontSizeLoop(12);
+
+
+
+/* font-weight */
+@fontWeight: range(400, 600, 100);
+.fontWeightLoop(@index) when (@index > 0) {
+  @t: extract(@fontWeight, @index);
+  .bold-@{t} {
+    font-weight: @t !important;
+  }
+  .fontWeightLoop(@index - 1);
+}
+.fontWeightLoop(length(@fontWeight));
+.bold {
+  font-weight: bold !important;
+}
+
+
+/* margin padding */
+.paddingMarginLoop(@index) when (@index <= 60) {
+  .m-t-@{index} {
+    margin-top: @index + 0px !important;
+  }
+  .m-r-@{index} {
+    margin-right: @index + 0px !important; 
+  }
+  .m-b-@{index} {
+    margin-bottom: @index + 0px !important; 
+  }
+  .m-l-@{index} {
+    margin-left: @index + 0px !important; 
+  }
+  .m-tb-@{index} {
+    margin-top: @index + 0px !important;
+    margin-bottom: @index + 0px !important; 
+  }
+  .m-lr-@{index} {
+    margin-left: @index + 0px !important;
+    margin-right: @index + 0px !important; 
+  }
+  .m-@{index} {
+    margin-top: @index + 0px !important;
+    margin-bottom: @index + 0px !important; 
+    margin-left: @index + 0px !important;
+    margin-right: @index + 0px !important; 
+  }
+
+  .p-t-@{index} {
+    padding-top: @index + 0px !important;
+  }
+  .p-r-@{index} {
+    padding-right: @index + 0px !important; 
+  }
+  .p-b-@{index} {
+    padding-bottom: @index + 0px !important; 
+  }
+  .p-l-@{index} {
+    padding-left: @index + 0px !important; 
+  }
+  .p-tb-@{index} {
+    padding-top: @index + 0px !important;
+    padding-bottom: @index + 0px !important; 
+  }
+  .p-lr-@{index} {
+    padding-left: @index + 0px !important;
+    padding-right: @index + 0px !important; 
+  }
+  .p-@{index} {
+    padding-top: @index + 0px !important;
+    padding-bottom: @index + 0px !important; 
+    padding-left: @index + 0px !important;
+    padding-right: @index + 0px !important;
+  }
+
+  .paddingMarginLoop(@index + 5);
+}
+.paddingMarginLoop(0);
+.m-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* line */
+.lineClampLoop(@index) when (@index <= 5) {
+  .line-@{index} {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: @index;
+    white-space: normal;
+    word-break: break-all;
+  }
+  
+  .lineClampLoop(@index + 1);
+}
+.lineClampLoop(1);
+
+/* color */
+.color-333 {
+  color: #333 !important;
+}
+.color-666 {
+  color: #666 !important;
+}
+.color-999 {
+  color: #999 !important;
+}
+
+.block {
+  display: block !important;
+}
+.inline-block {
+  display: inline-block !important;
+}
+
+/* flex */
+.flex {
+  display: flex !important;
+}
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+.flex-center {
+  display: flex !important;
+  align-items: center !important;
+}
+.flex1 {
+  flex: 1 !important;
+}
+
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+
+.white-bg {
+  background-color: #fff !important;
+}
+
+.nowrap {
+  white-space: nowrap !important;
+}
+
+@media screen and (max-width: 767px) {
+  
+}
