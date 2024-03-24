@@ -1,7 +1,6 @@
 /**
  * All configuration item explanations can be find in https://cli.vuejs.org/config/
  */
-const { defineConfig } = require('@vue/cli-service')
 const AutoImport = require('unplugin-auto-import/webpack') // Auto import APIs on-demand for Vite, Webpack, Rspack, Rollup and esbuild. With TypeScript support. Powered by unplugin.
 const Components = require('unplugin-vue-components/webpack') // On-demand components auto importing for Vue.
 const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
@@ -9,7 +8,7 @@ const Icons = require('unplugin-icons/webpack')
 const IconsResolver = require('unplugin-icons/resolver')
 const path = require('path');
 
-module.exports = defineConfig({
+module.exports = {
   publicPath: '/',
   outputDir: 'dist',
   assetsDir: 'static',
@@ -62,15 +61,17 @@ module.exports = defineConfig({
         autoInstall: true,
       })
     ]
+  },
+
+  chainWebpack: (config) => {
+    config.plugin('define').tap((definitions) => {
+      Object.assign(definitions[0], {
+        __VUE_OPTIONS_API__: 'true',
+        __VUE_PROD_DEVTOOLS__: 'false',
+        __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: 'false'
+      })
+      return definitions
+    })
   }
-})
+}
 
-
-
-
-/*
-const { defineConfig } = require('@vue/cli-service')
-module.exports = defineConfig({
-  transpileDependencies: true
-})
-*/
