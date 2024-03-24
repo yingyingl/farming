@@ -13,10 +13,17 @@ const routes = [
     redirect: '/index'
   },
   {
-    path: '/index',
+    path: '/',
     name: 'Home',
+    redirect: '/index',
     component: Layout,
-    component: () => import(/* webpackChunkName: "docs-index" */ '@/views/home/index.vue')
+    children: [
+      {
+        path: 'index',
+        name: 'HomeIndex',
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/home/index.vue')
+      }
+    ]
   }
 ]
 

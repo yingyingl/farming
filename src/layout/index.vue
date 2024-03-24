@@ -1,7 +1,8 @@
 <template>
   <div class="layout-wrap">
+    ....
     <div class="layout-right">
-      <el-config-provider :locale="locale">
+      <el-config-provider>
         <router-view />
       </el-config-provider>
     </div>
