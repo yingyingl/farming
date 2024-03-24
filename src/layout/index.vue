@@ -12,6 +12,18 @@
 import { ElConfigProvider } from 'element-plus'
 import 'element-plus/dist/index.css' // elementui样式（按需引入调用方法需要）
 
+const setSize = () => {
+  let screenWidth = document.documentElement.clientWidth
+  screenWidth = screenWidth > 750 ? 750 : screenWidth
+  const currentFontSize = screenWidth / 750
+  document.documentElement.style.fontSize = currentFontSize + 'px'
+}
+setSize()
+window.addEventListener('resize', setSize)
+
+onUnmounted(() => {
+  window.removeEventListener('resize', setSize)
+})
 </script>
 
 <style lang="less" scoped>
