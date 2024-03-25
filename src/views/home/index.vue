@@ -14,20 +14,24 @@
 
       <ul class="floor-box m-b-30">
         <li>
-          <img src="https://fengrangroup.com/template/pc/images/cy1.jpg" class="_bgimg" />
-          <div class="_box">
-            <img src="../../assets/icon1.png" class="_icon" />
-            <h3 class="_tit">育种体系</h3>
-            <p>种苗培育研发</p>
-          </div>
+          <router-link to="/breeding">
+            <img src="https://fengrangroup.com/template/pc/images/cy1.jpg" class="_bgimg" />
+            <div class="_box">
+              <img src="../../assets/icon1.png" class="_icon" />
+              <h3 class="_tit">育种体系</h3>
+              <p>种苗培育研发</p>
+            </div>
+          </router-link>
         </li>
         <li>
-          <img src="https://fengrangroup.com/template/pc/images/cy2.jpg" class="_bgimg" />
-          <div class="_box">
-            <img src="../../assets/icon1.png" class="_icon" />
-            <h3 class="_tit">育种体系</h3>
-            <p>种苗培育研发</p>
-          </div>
+          <router-link to="/plant">
+            <img src="https://fengrangroup.com/template/pc/images/cy2.jpg" class="_bgimg" />
+            <div class="_box">
+              <img src="../../assets/icon1.png" class="_icon" />
+              <h3 class="_tit">种植中心</h3>
+              <p>科学化种植</p>
+            </div>
+          </router-link>
         </li>
         <li>
           <img src="https://fengrangroup.com/template/pc/images/cy4.jpg" class="_bgimg" />
@@ -51,6 +55,16 @@
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router'
+
+const $router = useRouter()
+
+const goLink = (type) => {
+  const url = {
+    1: '/breeding'
+  }
+  $router.push(url[type])
+}
 </script>
 
 <style scoped lang="less">
@@ -84,6 +98,15 @@
     width: 23%;
     height: 360rem;
     overflow: hidden;
+    transition: all 300ms;
+    cursor: pointer;
+  }
+  li:hover {
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    ._box {
+      transform: scale(1.3);
+    }
   }
   ._box {
     position: absolute;
@@ -97,6 +120,7 @@
     align-items: center;
     color: @white-color;
     font-size: 16rem;
+    transition: all 300ms;
   }
   ._icon {
     width: 60rem;

@@ -2,19 +2,19 @@
   <section class="header-container">
     <div class="max-width m-auto header-main">
       <h1 class="logo-box">
-        <img src="../assets/logo.png" class="logo" />
+        <router-link to="/"><img src="../assets/logo.png" class="logo" /></router-link>
       </h1>
 
       <div class="menu-container">
         <div class="menu-btn" @click="showMenuHandle"><i></i><i></i><i></i></div>
         <div class="menu-box" v-if="showMunuBox">
           <ul>
-            <li class="active">首页</li>
-            <li>育种体系</li>
-            <li>种植中心</li>
-            <li>推广中心</li>
-            <li>加工体系</li>
-            <li>关于我们</li>
+            <li :class="{'active': $route.path === '/index'}"><router-link to="/">首页</router-link></li>
+            <li :class="{'active': $route.path.indexOf('/breeding') != -1}"><router-link to="/breeding">育种体系</router-link></li>
+            <li :class="{'active': $route.path.indexOf('/plant') != -1}"><router-link to="/plant">种植中心</router-link></li>
+            <li><router-link to="/">推广中心</router-link></li>
+            <li><router-link to="/">加工体系</router-link></li>
+            <li><router-link to="/">关于我们</router-link></li>
           </ul>
           <span>登录</span>
         </div>
@@ -24,6 +24,10 @@
 </template>
 
 <script setup>
+import { useRoute } from 'vue-router'
+
+const $route = useRoute()
+console.log($route.path)
 const showMunuBox = ref(true)
 const showMenuHandle = () => {
   showMunuBox.value = !showMunuBox.value
@@ -36,6 +40,10 @@ watch(() => window.innerWidth, (v) => {
 </script>
 
 <style scoped lang="less">
+.header-container {
+  background-color: @white-bg;
+  margin-bottom: 10rem;
+}
 .header-main {
   display: flex;
   align-items: center;
@@ -82,19 +90,26 @@ watch(() => window.innerWidth, (v) => {
     justify-content: center;
 
     li {
-      height: 40rem;
-      line-height: 40rem;
-      padding: 0 20rem;
       border-radius: 6rem;
       overflow: hidden;
       cursor: pointer;
       margin-left: 4rem;
       transition: all 200ms;
     }
+    a {
+      height: 40rem;
+      line-height: 40rem;
+      padding: 0 20rem;
+      color: #333;
+    }
     li.active, li:hover {
       color: @white-color;
       font-weight: 600;
       background-color: @mainColor08;
+
+      a {
+        color: @white-color;
+      }
     }
   }
 }

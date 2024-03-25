@@ -39,9 +39,12 @@ onUnmounted(() => {
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: rgba(243, 248, 255, .6);
 }
 .layout-main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (max-width: 767px) {
 }

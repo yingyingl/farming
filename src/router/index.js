@@ -22,6 +22,16 @@ const routes = [
         path: 'index',
         name: 'HomeIndex',
         component: () => import(/* webpackChunkName: "docs-index" */ '@/views/home/index.vue')
+      },
+      {
+        path: 'breeding',
+        name: 'BreedingIndex',
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/breeding/index.vue')
+      },
+      {
+        path: 'plant',
+        name: 'PlantIndex',
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/plant/index.vue')
       }
     ]
   }
