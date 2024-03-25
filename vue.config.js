@@ -15,10 +15,10 @@ module.exports = {
   lintOnSave: false,
   productionSourceMap: false,
   pluginOptions: {
-   // 'style-resources-loader': {
-     //   preProcessor: 'less',
-    //    patterns: [path.resolve(__dirname, 'src/global.less')]
-   // }
+    'style-resources-loader': {
+        preProcessor: 'less',
+        patterns: [path.resolve(__dirname, './src/global.less')]
+    }
   },
   devServer: {
     port: 9527,

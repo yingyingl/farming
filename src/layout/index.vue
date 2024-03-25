@@ -3,7 +3,7 @@
     <Header class="layout-header"></Header>
 
     <div class="layout-main">
-      <el-config-provider local="zh">
+      <el-config-provider :locale="zhCn">
         <router-view />
       </el-config-provider>
     </div>
@@ -14,6 +14,7 @@
 
 <script setup>
 import { ElConfigProvider } from 'element-plus'
+import zhCn from 'element-plus/dist/locale/zh-cn.mjs' 
 import 'element-plus/dist/index.css' // elementui样式（按需引入调用方法需要）
 
 import Header from './header'
