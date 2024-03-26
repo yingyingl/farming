@@ -5,7 +5,7 @@
     </div>
     
     <div class="max-width m-auto p-lr-20 p-b-20 page-main">
-      <h2 class="page-title">旱碱麦种植中心</h2>
+      <h2 class="page-title">旱碱麦加工体系联合创新中心</h2>
       <p class="page-desc">研究为进一步推进盐碱地种植小麦选育、栽培</p>
 
       <ul class="tab-box">

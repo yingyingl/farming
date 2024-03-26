@@ -36,7 +36,7 @@ onUnmounted(() => {
 
 <style lang="less" scoped>
 .layout-wrap {
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   background-color: rgba(243, 248, 255, .6);

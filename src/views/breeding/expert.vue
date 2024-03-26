@@ -5,46 +5,33 @@
     </div>
     
     <div class="max-width m-auto p-lr-20 p-b-20 page-main">
-      <h2 class="page-title">旱碱麦种植中心</h2>
+      <h2 class="page-title">专家商会</h2>
       <p class="page-desc">研究为进一步推进盐碱地种植小麦选育、栽培</p>
 
       <ul class="tab-box">
-        <li class="active">
-          <div class="tab-con">
+        <li>
+          <router-link to="/" class="tab-con">
+            <span class="iconfont">&#xe60a;</span>
+            <p>腾讯会议</p>
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/" class="tab-con">
             <span class="iconfont">&#xe6d0;</span>
-            <p>监控</p>
-          </div>
+            <p>腾讯会议</p>
+          </router-link>
         </li>
         <li>
-          <div class="tab-con">
-            <span class="iconfont iconfont2">&#xe652;</span>
-            <p>商会</p>
-          </div>
+          <router-link to="/" class="tab-con">
+            <span class="iconfont">&#xe60a;</span>
+            <p>腾讯会议</p>
+          </router-link>
         </li>
         <li>
-          <div class="tab-con">
-            <span class="iconfont iconfont3">&#xe617;</span>
-            <p>数据</p>
-          </div>
-        </li>
-      </ul>
-
-      <ul class="jk-box">
-        <li>
-          <div class="img-box">
-            <img src="https://aiplat.mapfarm.com/assets/img/ability_img31.713faafc.png" class="_img" />
-          </div>
-        </li>
-        <li>
-          <div class="img-box">
-            <img src="https://aiplat.mapfarm.com/assets/img/ability_img34.cb98c473.png" class="_img" />
-          </div>
-          
-        </li>
-        <li>
-          <div class="img-box">
-            <img src="https://aiplat.mapfarm.com/assets/img/ability_img32.14dd5e42.png" class="_img" />
-          </div>
+          <router-link to="/" class="tab-con">
+            <span class="iconfont">&#xe600;</span>
+            <p>Welink</p>
+          </router-link>
         </li>
       </ul>
     </div>
@@ -103,6 +90,7 @@
     width: 190rem;
     text-align: center;
     cursor: pointer;
+    color:#333;
     padding-bottom: 20rem;
   }
   .iconfont {
@@ -113,6 +101,7 @@
     justify-content: center;
     font-size: 56rem;
     margin: 0 auto;
+    color:royalblue;
   }
   .iconfont2 {
     font-size: 72rem;
@@ -120,28 +109,6 @@
   .iconfont3 {
     font-weight: bold;
   }
-
-  li.active {
-    color: @main-color;
-    .tab-con { border-bottom: 2rem solid @main-color; }
-    p { font-weight: bold; }
-  }
 }
 
-.jk-box {
-  display: flex;
-  justify-content: center;
-  margin-top: 30rem;
-
-  li {
-    width: 33.3333%;
-    max-width: 300rem;
-    padding: 0 20rem;
-  }
-  ._img {
-    width: 100%;
-    border-radius: 10rem;
-    cursor: pointer;
-  }
-}
 </style>

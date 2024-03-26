@@ -14,7 +14,7 @@
             <li :class="{'active': $route.path.indexOf('/breeding') != -1}"><router-link to="/breeding">育种体系</router-link></li>
             <li :class="{'active': $route.path.indexOf('/plant') != -1}"><router-link to="/plant">种植中心</router-link></li>
             <li><router-link to="/">推广中心</router-link></li>
-            <li><router-link to="/">加工体系</router-link></li>
+            <li :class="{'active': $route.path.indexOf('/process') != -1}"><router-link to="/process">加工体系</router-link></li>
             <li><router-link to="/">关于我们</router-link></li>
           </ul>
           <span>登录</span>

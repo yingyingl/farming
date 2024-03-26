@@ -1,40 +1,52 @@
 <template>
   <section class="page-container">
-    <img src="../../assets/breeding-banner.png" class="page-banner" />
+    <div class="page-banner-box">
+      <img src="../../assets/breeding-banner.png" class="page-banner" />
+    </div>
+    
     <div class="max-width m-auto p-lr-20 p-b-20 page-main">
       <h2 class="page-title">旱碱麦育种体系联合创新中心</h2>
       <p class="page-desc">研究为进一步推进盐碱地种植小麦选育、栽培</p>
 
       <ul class="tab-box">
-        <li class="active">
-          <div class="tab-con">
+        <li>
+          <router-link to="/breeding/monitor" class="tab-con">
             <span class="iconfont">&#xe6d0;</span>
             <p>监控</p>
-          </div>
+          </router-link>
         </li>
         <li>
-          <div class="tab-con">
+          <router-link to="breeding/expert"  class="tab-con">
             <span class="iconfont iconfont2">&#xe652;</span>
             <p>商会</p>
-          </div>
+          </router-link>
         </li>
         <li>
-          <div class="tab-con">
+          <router-link to="breeding/data"  class="tab-con">
             <span class="iconfont iconfont3">&#xe617;</span>
             <p>数据</p>
-          </div>
+          </router-link>
         </li>
       </ul>
 
       <ul class="jk-box">
         <li>
-          <img src="https://aiplat.mapfarm.com/assets/img/ability_img11.83039c3e.png" class="_img" />
+          <div class="img-box">
+            <router-link to="/breeding/monitor">
+              <img src="https://aiplat.mapfarm.com/assets/img/ability_img11.83039c3e.png" class="_img" />
+            </router-link>
+          </div>
         </li>
         <li>
-          <img src="https://aiplat.mapfarm.com/assets/img/ability_img12.c38957b1.png" class="_img" />
+          <router-link to="breeding/expert" class="img-box">
+            <img src="https://aiplat.mapfarm.com/assets/img/ability_img12.c38957b1.png" class="_img" />
+          </router-link>
+          
         </li>
         <li>
-          <img src="https://aiplat.mapfarm.com/assets/img/ability_img15.f2328e49.png" class="_img" />
+          <router-link to="breeding/data"  class="img-box">
+            <img src="https://aiplat.mapfarm.com/assets/img/ability_img15.f2328e49.png" class="_img" />
+          </router-link>
         </li>
       </ul>
     </div>
@@ -50,9 +62,13 @@
   display: flex;
   flex-direction: column;
 }
-.page-banner {
+.page-banner-box {
   width: 100%;
-  height: 400rem;
+  height: 240rem;
+  overflow: hidden;
+}
+.page-banner {
+  width: 100%; 
 }
 .page-main {
   flex: 1;
@@ -90,6 +106,8 @@
     text-align: center;
     cursor: pointer;
     padding-bottom: 20rem;
+    color: #333;
+    border-bottom: 2px solid #fff;
   }
   .iconfont {
     width: 80rem;
@@ -107,23 +125,27 @@
     font-weight: bold;
   }
 
-  li.active {
+  li:hover {
     color: @main-color;
-    .tab-con { border-bottom: 2rem solid @main-color; }
+    .tab-con { border-bottom: 2rem solid @main-color;  color: @main-color; }
     p { font-weight: bold; }
   }
 }
 
 .jk-box {
   display: flex;
+  justify-content: center;
+  margin-top: 30rem;
 
   li {
     width: 33.3333%;
     max-width: 300rem;
+    padding: 0 20rem;
   }
   ._img {
     width: 100%;
-    margin: 0 20rem;
+    border-radius: 10rem;
+    cursor: pointer;
   }
 }
 </style>
