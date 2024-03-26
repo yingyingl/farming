@@ -56,6 +56,11 @@ const routes = [
         path: 'process',
         name: 'ProcessIndex',
         component: () => import(/* webpackChunkName: "docs-index" */ '@/views/process/index.vue')
+      },
+      {
+        path: 'promotion',
+        name: 'PromotionIndex',
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/promotion/index.vue')
       }
     ]
   }

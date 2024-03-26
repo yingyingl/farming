@@ -32,20 +32,24 @@
           </router-link>
         </li>
         <li>
-          <img src="https://fengrangroup.com/template/pc/images/cy4.jpg" class="_bgimg" />
-          <div class="_box">
-            <span class="iconfont _icon">&#xe633;</span>
-            <h3 class="_tit">推广中心</h3>
-            <p>一体化在线教学</p>
-          </div>
+          <router-link to="/promotion">
+            <img src="https://fengrangroup.com/template/pc/images/cy4.jpg" class="_bgimg" />
+            <div class="_box">
+              <span class="iconfont _icon">&#xe633;</span>
+              <h3 class="_tit">推广中心</h3>
+              <p>一体化在线教学</p>
+            </div>
+          </router-link>
         </li>
         <li>
-          <img src="https://fengrangroup.com/template/pc/images/cy3.jpg" class="_bgimg" />
-          <div class="_box">
-            <span class="iconfont _icon">&#xe670;</span>
-            <h3 class="_tit">加工体系</h3>
-            <p>完备的供应链</p>
-          </div>
+          <router-link to="/process">
+            <img src="https://fengrangroup.com/template/pc/images/cy3.jpg" class="_bgimg" />
+            <div class="_box">
+              <span class="iconfont _icon">&#xe670;</span>
+              <h3 class="_tit">加工体系</h3>
+              <p>完备的供应链</p>
+            </div>
+          </router-link>
         </li>
       </ul>
     </div>
