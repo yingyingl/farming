@@ -53,6 +53,14 @@ const routes = [
         component: () => import(/* webpackChunkName: "docs-index" */ '@/views/plant/index.vue')
       },
       {
+        path: 'plant/visualization',
+        name: 'PlantVisualization',
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/plant/visualization.vue')
+      },
+
+
+
+      {
         path: 'process',
         name: 'ProcessIndex',
         component: () => import(/* webpackChunkName: "docs-index" */ '@/views/process/index.vue')

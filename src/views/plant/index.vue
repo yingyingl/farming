@@ -5,55 +5,55 @@
     </div>
     
     <div class="max-width m-auto p-lr-20 p-b-20 page-main">
-      <h2 class="page-title">旱碱麦种植中心</h2>
+      <h2 class="page-title">旱碱麦育种体系联合创新中心</h2>
       <p class="page-desc">研究为进一步推进盐碱地种植小麦选育、栽培</p>
 
-      <ul class="content-box">
+      <ul class="tab-box">
         <li>
-          <div class="img-box" @click="showChartsHandle(1)">
-            <img src="https://echarts.apache.org/examples/data/thumb/radar-custom.webp?_v_=1710607049619" class="_img" />
-            种植面积
+          <router-link to="/breeding/monitor" class="tab-con">
+            <span class="iconfont">&#xe6d0;</span>
+            <p>监控</p>
+          </router-link>
+        </li>
+        <li>
+          <router-link to="breeding/expert"  class="tab-con">
+            <span class="iconfont iconfont2">&#xe652;</span>
+            <p>会商</p>
+          </router-link>
+        </li>
+        <li>
+          <router-link to="plant/visualization"  class="tab-con">
+            <span class="iconfont iconfont3">&#xe617;</span>
+            <p>可视化</p>
+          </router-link>
+        </li>
+      </ul>
+
+      <ul class="jk-box">
+        <li>
+          <div class="img-box">
+            <router-link to="/breeding/monitor">
+              <img src="https://aiplat.mapfarm.com/assets/img/ability_img11.83039c3e.png" class="_img" />
+            </router-link>
           </div>
         </li>
         <li>
-          <div class="img-box" @click="showChartsHandle(2)">
-            <img src="https://echarts.apache.org/examples/data/thumb/bar-label-rotation.webp?_v_=1710607049619" class="_img" />
-            种植产量
-          </div>
+          <router-link to="breeding/expert" class="img-box">
+            <img src="https://aiplat.mapfarm.com/assets/img/ability_img12.c38957b1.png" class="_img" />
+          </router-link>
+          
         </li>
         <li>
-          <div class="img-box" @click="showChartsHandle(3)">
-            <img src="https://echarts.apache.org/examples/data/thumb/pie-roseType.webp?_v_=1710607049619" class="_img" />
-            种植品种
-          </div>
-        </li>
-        <li>
-          <div class="img-box" @click="showChartsHandle(4)">
-            <img src="https://echarts.apache.org/examples/data/thumb/area-stack.webp?_v_=1710607049619" class="_img" />
-            气象数据
-          </div>
+          <router-link to="breeding/data"  class="img-box">
+            <img src="https://aiplat.mapfarm.com/assets/img/ability_img15.f2328e49.png" class="_img" />
+          </router-link>
         </li>
       </ul>
     </div>
-
-    <AreaCharts v-if="showType == 1" @closeModal="showChartsHandle" />
-    <YieldCharts v-if="showType == 2" @closeModal="showChartsHandle" />
-    <VarietyCharts v-if="showType == 3" @closeModal="showChartsHandle" />
-    <WeatherCharts v-if="showType == 4" @closeModal="showChartsHandle" />
   </section>
 </template>
 
-<script setup>
-import AreaCharts from './areaCharts.vue'
-import YieldCharts from './yieldCharts.vue'
-import VarietyCharts from './varietyCharts.vue'
-import WeatherCharts from './weatherCharts.vue'
-
-const showType = ref('')
-const showChartsHandle = (type) => {
-  showType.value = type
-}
-</script>
+<script setup></script>
 
 <style scoped lang="less">
 .page-container {
@@ -88,30 +88,64 @@ const showChartsHandle = (type) => {
   text-align: center;
   padding-bottom: 40rem;
 }
-.content-box {
+
+.tab-box {
+  width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 30rem;
 
   li {
-    width: 25%;
+    width: 33.3333%;
     max-width: 300rem;
-    padding: 0 20rem;
-    color: #333;
+    display: flex;
+    justify-content: center;
+  }
+  .tab-con {
+    width: 190rem;
     text-align: center;
-  }
-  .img-box {
     cursor: pointer;
+    padding-bottom: 20rem;
+    color: #333;
+    border-bottom: 2px solid #fff;
   }
-  ._img {
-    width: 100%;
+  .iconfont {
+    width: 80rem;
+    height: 80rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56rem;
+    margin: 0 auto;
+  }
+  .iconfont2 {
+    font-size: 72rem;
+  }
+  .iconfont3 {
+    font-weight: bold;
+  }
+
+  li:hover {
+    color: @main-color;
+    .tab-con { border-bottom: 2rem solid @main-color;  color: @main-color; }
+    p { font-weight: bold; }
   }
 }
 
-.area-charts-box {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.jk-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 30rem;
+
+  li {
+    width: 33.3333%;
+    max-width: 300rem;
+    padding: 0 20rem;
+  }
+  ._img {
+    width: 100%;
+    border-radius: 10rem;
+    cursor: pointer;
+  }
 }
 </style>
