@@ -5,7 +5,7 @@
     </div>
     
     <div class="max-width m-auto p-lr-20 p-b-20 page-main">
-      <h2 class="page-title">专家商会</h2>
+      <h2 class="page-title">专家会商</h2>
       <p class="page-desc">研究为进一步推进盐碱地种植小麦选育、栽培</p>
 
       <ul class="tab-box">

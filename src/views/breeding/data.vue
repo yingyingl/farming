@@ -8,10 +8,10 @@
       <h2 class="page-title">旱碱麦育种体系联合创新中心数据</h2>
 
       <el-form class="form-box">
-        <el-form-item label="品种名称"><el-input /></el-form-item>
-        <el-form-item label="品种名称"><el-input /></el-form-item>
-        <el-form-item label="品种名称"><el-input /></el-form-item>
-        <el-form-item label=""><el-button type="primary">搜索</el-button></el-form-item>
+        <el-form-item label="品种名称" class="m-r-20"><el-input /></el-form-item>
+        <el-form-item label="生育期" class="m-r-20"><el-input /></el-form-item>
+        <el-form-item label="选育单位" class="m-r-20"><el-input /></el-form-item>
+        <el-form-item class="flex1"><el-button type="primary">搜索</el-button></el-form-item>
       </el-form>
 
       <el-table :data="dataList">

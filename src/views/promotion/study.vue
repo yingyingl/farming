@@ -10,9 +10,20 @@
       <p class="page-desc">学习系统中，可以在线浏览农业种植技术规程、PPT课件、栽培技术等文本学习资料，浏览图片、学习视频</p>
 
       <ul class="list-box">
-        <li v-for="item in 50" :key="item">>> {{item}}旱碱麦育种体系联合创新中心监控</li>
+        <li v-for="item in 20" :key="item">>> {{item}}旱碱麦育种体系联合创新中心监控</li>
       </ul>
     </div>
+
+    <div class="t-right m-b-20" style="display: flex; justify-content: center;">
+      <el-pagination
+        small
+        background
+        layout="prev, pager, next"
+        :total="50"
+        class="mt-4"
+      />
+    </div>
+
   </section>
 </template>
 
@@ -56,8 +67,8 @@
   display: flex;
   flex-wrap: wrap;
   li {
-    width: 33.3333%;
-    padding: 4rem ;
+    width: 50%;
+    padding: 8rem ;
     cursor: pointer;
   }
 }

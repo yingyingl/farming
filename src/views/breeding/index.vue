@@ -18,7 +18,7 @@
         <li>
           <router-link to="breeding/expert"  class="tab-con">
             <span class="iconfont iconfont2">&#xe652;</span>
-            <p>商会</p>
+            <p>会商</p>
           </router-link>
         </li>
         <li>
