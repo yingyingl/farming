@@ -5,21 +5,12 @@
     </div>
     
     <div class="max-width m-auto p-lr-20 p-b-20 page-main">
-      <p class="t-right m-t-10"><router-link to="/promotion/study">在线学习</router-link></p>
-      <h2 class="page-title">旱碱麦推广中心专家问答</h2>
-      <p class="page-desc">问答系统中保存专家的姓名、专业、擅长领域等信息，要求可以实时在线回答农民提出的问题</p>
-
-      <div class="filter-box">
-        <div class="flex">
-          <strong>地区</strong>
-        </div>
-        <div class="flex">
-          <strong>疾病</strong>
-        </div>
-      </div>
+      <p class="t-right m-t-10"><router-link to="/promotion">专家问答</router-link></p>
+      <h2 class="page-title">旱碱麦推广中心在线学习</h2>
+      <p class="page-desc">学习系统中，可以在线浏览农业种植技术规程、PPT课件、栽培技术等文本学习资料，浏览图片、学习视频</p>
 
       <ul class="list-box">
-        <li></li>
+        <li v-for="item in 50" :key="item">>> {{item}}旱碱麦育种体系联合创新中心监控</li>
       </ul>
     </div>
   </section>
@@ -51,7 +42,7 @@
   font-size: 36rem;
   color: #061640;
   text-align: center;
-  padding: 20rem 0 20rem 0;
+  padding: 40rem 0 20rem 0;
 }
 .page-desc {
   line-height: 40rem;
@@ -61,14 +52,13 @@
   padding-bottom: 40rem;
 }
 
-
-.filter-box {
-  border-top: 10rem solid @main-border-color;
-  border-bottom: 10rem solid @main-border-color;
-  padding: 20rem;
-}
-
-.list-box li {
-  
+.list-box {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    width: 33.3333%;
+    padding: 4rem ;
+    cursor: pointer;
+  }
 }
 </style>

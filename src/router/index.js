@@ -61,6 +61,11 @@ const routes = [
         path: 'promotion',
         name: 'PromotionIndex',
         component: () => import(/* webpackChunkName: "docs-index" */ '@/views/promotion/index.vue')
+      },
+      {
+        path: 'promotion/study',
+        name: 'PromotionStudy',
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/promotion/study.vue')
       }
     ]
   }
