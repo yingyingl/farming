@@ -10,10 +10,10 @@
 
       <ul class="tab-box">
         <li>
-          <router-link to="/" class="tab-con">
+          <a href="https://meeting.tencent.com/dm/gKDNPFtTo4FZ" target="_blank" class="tab-con">
             <span class="iconfont">&#xe60a;</span>
             <p>腾讯会议</p>
-          </router-link>
+          </a>
         </li>
         <li>
           <router-link to="/" class="tab-con">
