@@ -9,42 +9,44 @@
       <p class="page-desc">研究为进一步推进盐碱地种植小麦选育、栽培</p>
 
       <ul class="tab-box">
-        <li class="active">
-          <div class="tab-con">
+        <li>
+          <router-link to="/breeding/monitor" class="tab-con">
             <span class="iconfont">&#xe6d0;</span>
             <p>监控</p>
-          </div>
+          </router-link>
         </li>
         <li>
-          <div class="tab-con">
+          <router-link to="breeding/expert"  class="tab-con">
             <span class="iconfont iconfont2">&#xe652;</span>
             <p>商会</p>
-          </div>
+          </router-link>
         </li>
         <li>
-          <div class="tab-con">
+          <router-link to="breeding/data"  class="tab-con">
             <span class="iconfont iconfont3">&#xe617;</span>
             <p>数据</p>
-          </div>
+          </router-link>
         </li>
       </ul>
 
       <ul class="jk-box">
         <li>
           <div class="img-box">
-            <img src="https://aiplat.mapfarm.com/assets/img/ability_img31.713faafc.png" class="_img" />
+            <router-link to="/breeding/monitor">
+              <img src="https://aiplat.mapfarm.com/assets/img/ability_img11.83039c3e.png" class="_img" />
+            </router-link>
           </div>
         </li>
         <li>
-          <div class="img-box">
-            <img src="https://aiplat.mapfarm.com/assets/img/ability_img34.cb98c473.png" class="_img" />
-          </div>
+          <router-link to="breeding/expert" class="img-box">
+            <img src="https://aiplat.mapfarm.com/assets/img/ability_img12.c38957b1.png" class="_img" />
+          </router-link>
           
         </li>
         <li>
-          <div class="img-box">
-            <img src="https://aiplat.mapfarm.com/assets/img/ability_img32.14dd5e42.png" class="_img" />
-          </div>
+          <router-link to="breeding/data"  class="img-box">
+            <img src="https://aiplat.mapfarm.com/assets/img/ability_img15.f2328e49.png" class="_img" />
+          </router-link>
         </li>
       </ul>
     </div>
