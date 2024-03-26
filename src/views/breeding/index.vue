@@ -1,20 +1,42 @@
 <template>
   <section class="page-container">
+    <img src="../../assets/breeding-banner.png" class="page-banner" />
     <div class="max-width m-auto p-lr-20 p-b-20 page-main">
-      <div class="m-b-10 page-break">您当前的位置: 
-        <router-link to="/index" class="_link">首页</router-link>
-        <span class="_arrow">&gt;</span>
-        育种体系
-      </div>
+      <h2 class="page-title">旱碱麦育种体系联合创新中心</h2>
+      <p class="page-desc">研究为进一步推进盐碱地种植小麦选育、栽培</p>
 
-      <div class="page-box">
-        <div class="box-sidebar">
-          <h2>育种体系</h2>
-        </div>
+      <ul class="tab-box">
+        <li class="active">
+          <div class="tab-con">
+            <span class="iconfont">&#xe6d0;</span>
+            <p>监控</p>
+          </div>
+        </li>
+        <li>
+          <div class="tab-con">
+            <span class="iconfont iconfont2">&#xe652;</span>
+            <p>商会</p>
+          </div>
+        </li>
+        <li>
+          <div class="tab-con">
+            <span class="iconfont iconfont3">&#xe617;</span>
+            <p>数据</p>
+          </div>
+        </li>
+      </ul>
 
-        <div class="box-content">育种体系内容</div>
-      </div>
-
+      <ul class="jk-box">
+        <li>
+          <img src="https://aiplat.mapfarm.com/assets/img/ability_img11.83039c3e.png" class="_img" />
+        </li>
+        <li>
+          <img src="https://aiplat.mapfarm.com/assets/img/ability_img12.c38957b1.png" class="_img" />
+        </li>
+        <li>
+          <img src="https://aiplat.mapfarm.com/assets/img/ability_img15.f2328e49.png" class="_img" />
+        </li>
+      </ul>
     </div>
   </section>
 </template>
@@ -26,38 +48,82 @@
   flex: 1;
   min-height: 0;
   display: flex;
+  flex-direction: column;
+}
+.page-banner {
+  width: 100%;
+  height: 400rem;
 }
 .page-main {
   flex: 1;
   min-height: 0;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+}
+.page-title {
+  font-size: 36rem;
+  color: #061640;
+  text-align: center;
+  padding: 84rem 0 20rem 0;
+}
+.page-desc {
+  line-height: 40rem;
+  font-size: 20rem;
+  color: @main-color;
+  text-align: center;
+  padding-bottom: 40rem;
 }
 
-.page-box {
-  flex: 1;
-  background-color: @white-bg;
-  border: 1rem solid @main-border-color;
+.tab-box {
+  width: 100%;
   display: flex;
-}
-.box-sidebar {
-  width: 200rem;
-  border-right: 1px solid @main-border-color;
+  justify-content: center;
+  margin-top: 30rem;
 
-  h2 {
-    line-height: 40rem;
-    padding: 10rem 0;
-    font-size: 18rem;
-    font-weight: bold;
-    background-color: @mainColor08;
+  li {
+    width: 33.3333%;
+    max-width: 300rem;
+    display: flex;
+    justify-content: center;
+  }
+  .tab-con {
+    width: 190rem;
     text-align: center;
-    color: @white-color;
+    cursor: pointer;
+    padding-bottom: 20rem;
+  }
+  .iconfont {
+    width: 80rem;
+    height: 80rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56rem;
+    margin: 0 auto;
+  }
+  .iconfont2 {
+    font-size: 72rem;
+  }
+  .iconfont3 {
+    font-weight: bold;
+  }
+
+  li.active {
+    color: @main-color;
+    .tab-con { border-bottom: 2rem solid @main-color; }
+    p { font-weight: bold; }
   }
 }
-.box-content {
-  flex: 1;
-  padding: 20rem;
-  overflow-y: auto;
-}
 
+.jk-box {
+  display: flex;
+
+  li {
+    width: 33.3333%;
+    max-width: 300rem;
+  }
+  ._img {
+    width: 100%;
+    margin: 0 20rem;
+  }
+}
 </style>

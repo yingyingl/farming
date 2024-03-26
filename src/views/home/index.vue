@@ -1,14 +1,12 @@
 <template>
   <section class="page-container">
     <div class="max-width m-auto page-main">
-      <el-carousel height="400rem" class="scroll-box m-b-30">
+      <el-carousel height="700rem" class="scroll-box m-b-30">
         <el-carousel-item class="scroll-item">
           <img src="../../assets/banner1.png" class="scroll-img" />
-          <p class="scroll-text scroll-text1">提起旱碱麦，人们耳熟能详，皆知盐碱地专属“特产”。但你知道吗？培育一个能在盐碱地扎下跟，且稳产、高产的旱碱麦品种，并不是意见易事，甚至需要数十年的光阴。</p>
         </el-carousel-item>
         <el-carousel-item>
-          <img src="../../assets/banner2.png" />
-          <p class="scroll-text scroll-text2">提起旱碱麦，人们耳熟能详，皆知盐碱地专属“特产”。但你知道吗？培育一个能在盐碱地扎下跟，且稳产、高产的旱碱麦品种，并不是意见易事，甚至需要数十年的光阴。</p>
+          <img src="../../assets/banner2.png" class="scroll-img" />
         </el-carousel-item>
       </el-carousel>
 
@@ -17,7 +15,7 @@
           <router-link to="/breeding">
             <img src="https://fengrangroup.com/template/pc/images/cy1.jpg" class="_bgimg" />
             <div class="_box">
-              <img src="../../assets/icon1.png" class="_icon" />
+              <span class="iconfont _icon">&#xe713;</span>
               <h3 class="_tit">育种体系</h3>
               <p>种苗培育研发</p>
             </div>
@@ -27,7 +25,7 @@
           <router-link to="/plant">
             <img src="https://fengrangroup.com/template/pc/images/cy2.jpg" class="_bgimg" />
             <div class="_box">
-              <img src="../../assets/icon1.png" class="_icon" />
+              <span class="iconfont _icon">&#xe632;</span>
               <h3 class="_tit">种植中心</h3>
               <p>科学化种植</p>
             </div>
@@ -36,17 +34,17 @@
         <li>
           <img src="https://fengrangroup.com/template/pc/images/cy4.jpg" class="_bgimg" />
           <div class="_box">
-            <img src="../../assets/icon1.png" class="_icon" />
-            <h3 class="_tit">育种体系</h3>
-            <p>种苗培育研发</p>
+            <span class="iconfont _icon">&#xe633;</span>
+            <h3 class="_tit">推广中心</h3>
+            <p>一体化在线教学</p>
           </div>
         </li>
         <li>
           <img src="https://fengrangroup.com/template/pc/images/cy3.jpg" class="_bgimg" />
           <div class="_box">
-            <img src="../../assets/icon1.png" class="_icon" />
-            <h3 class="_tit">育种体系</h3>
-            <p>种苗培育研发</p>
+            <span class="iconfont _icon">&#xe670;</span>
+            <h3 class="_tit">加工体系</h3>
+            <p>完备的供应链</p>
           </div>
         </li>
       </ul>
@@ -71,22 +69,6 @@ const goLink = (type) => {
 .scroll-img {
   width: 100%;
   height: 100%;
-}
-.scroll-text {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 500rem;
-  font-size: 24rem;
-  font-weight: 600;
-  color: @white-color;
-}
-
-.scroll-text1 {
-  left: 30rem;
-}
-.scroll-text2 {
-  right: 30rem;
 }
 
 .floor-box {
@@ -125,11 +107,15 @@ const goLink = (type) => {
   ._icon {
     width: 60rem;
     height: 60rem;
+    font-size: 80rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   ._tit {
     font-size: 26rem;
     font-weight: 600;
-    margin-top: 10rem;
+    margin-top: 20rem;
   }
 }
 </style>

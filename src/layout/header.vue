@@ -1,4 +1,5 @@
 <template>
+  <div class="header-null-box"></div>
   <section class="header-container">
     <div class="max-width m-auto header-main">
       <h1 class="logo-box">
@@ -28,7 +29,7 @@ import { useRoute } from 'vue-router'
 
 const $route = useRoute()
 console.log($route.path)
-const showMunuBox = ref(true)
+const showMunuBox = ref(window.innerWidth > 767)
 const showMenuHandle = () => {
   showMunuBox.value = !showMunuBox.value
 }
@@ -40,14 +41,26 @@ watch(() => window.innerWidth, (v) => {
 </script>
 
 <style scoped lang="less">
+.header-null-box {
+  flex-shrink: 0;
+  height: 70rem;
+}
 .header-container {
-  background-color: @white-bg;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  flex-shrink: 0;
+  background-color: rgba(6, 22, 64, .88);
   margin-bottom: 10rem;
 }
 .header-main {
+  width: 100%;
+  height: 70rem;
   display: flex;
   align-items: center;
-  padding: 10rem 20rem;
+  padding: 0 20rem;
 }
 .logo-box {
   font-size: 0;
@@ -74,7 +87,7 @@ watch(() => window.innerWidth, (v) => {
     height: 2rem;
     margin-top: 3rem;
     display: block;
-    background-color: @mainColor08;
+    background-color: @main-color;
   }
 }
 .menu-box {
@@ -82,6 +95,7 @@ watch(() => window.innerWidth, (v) => {
   min-width: 0;
   display: flex;
   align-items: center;
+  color: @main-color;
 
   ul {
     flex: 1;
@@ -100,15 +114,14 @@ watch(() => window.innerWidth, (v) => {
       height: 40rem;
       line-height: 40rem;
       padding: 0 20rem;
-      color: #333;
+      color: @white-color;
     }
     li.active, li:hover {
-      color: @white-color;
+      color: @main-color;
       font-weight: 600;
-      background-color: @mainColor08;
 
       a {
-        color: @white-color;
+        color: @main-color;
       }
     }
   }
@@ -124,7 +137,7 @@ watch(() => window.innerWidth, (v) => {
     right: 0;
     z-index: 1;
     padding: 6rem 8rem;
-    background: @white-bg;
+    background-color: rgba(6, 22, 64, .88);
     border: 1px solid #999;
     border-radius: 10rem;
 
