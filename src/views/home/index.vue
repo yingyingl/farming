@@ -121,8 +121,8 @@
     <!-- 关于我们 -->
     <div id="tabRef5" class="floor1-box">
       <div class="max-width m-auto p-b-30">
-        <h2 class="page-title">旱碱麦体系</h2>
-        <p class="page-desc">研究为进一步推进盐碱地种植小麦选育、栽培</p>
+        <h2 class="page-title">联系我们</h2>
+        <p class="page-desc">我们为您提供了个性化的服务，以及全面的技术服务</p>
 
         <div class="plant-box">
           <el-carousel type="card" height="400px" class="concat-box" trigger="hover" :autoplay="false" indicator-position="none">
@@ -338,6 +338,7 @@ watch(() => window.innerWidth, (v) => {
   }
   .__img {
     transition: all 200ms;
+    filter: blur(2rem);
   }
   ._box:hover {
     .__img {
