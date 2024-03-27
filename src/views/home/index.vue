@@ -42,7 +42,7 @@
 
         <ul class="list-box breeding-box">
           <li>
-            <a href="http://182.92.115.164:8001/#/bigscreen/preview?code=preview_bigScreen_pxXkVHIkYd" target="_blank" class="_box">
+            <a href="http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_pxXkVHIkYd" target="_blank" class="_box">
               <img src="../../assets/breeding-monitor.png" class="__img" />
               <div class="__con">
                 <p class="___name">可视化监控</p>
@@ -72,7 +72,7 @@
 
         <ul class="list-box breeding-box">
           <li>
-            <a href="http://182.92.115.164:8001/#/bigscreen/preview?code=preview_bigScreen_pxXkVHIkYd" target="_blank" class="_box">
+            <a href="http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_4DrCdi0bxm" target="_blank" class="_box">
               <img src="../../assets/plant-img1.jpeg" class="__img __img1" />
               <div class="__con">
                 <p class="___name">可视化监控</p>
@@ -127,7 +127,7 @@
 
         <ul class="list-box breeding-box">
           <li>
-            <a href="http://182.92.115.164:8001/#/bigscreen/preview?code=preview_bigScreen_pxXkVHIkYd" target="_blank" class="_box">
+            <a href="http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_hSy2Yq2Wcv" target="_blank" class="_box">
               <img src="../../assets/img1.png" class="__img __img1" />
               <div class="__con">
                 <p class="___name">可视化监控</p>
@@ -165,7 +165,7 @@
             </el-carousel-item>
             <el-carousel-item class="_item">
               <img src="../../assets/hy-bg2.png" class="__bg" />
-              <a href="https://meeting.tencent.com/dm/lE1p03KSb6yv" class="__logo-box">
+              <a href="WeMeet://WeMeet" class="__logo-box">
                 <img src="../../assets/dd-logo.jpg" class="__logo" />
               </a>
             </el-carousel-item>

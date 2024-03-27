@@ -57,7 +57,7 @@ watch(() => window.innerWidth, (v) => {
   font-size: 0;
 }
 .logo {
-  width: 100rem;
+  height: 40rem;
   cursor: pointer;
 }
 .login {
