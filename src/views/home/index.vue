@@ -17,7 +17,8 @@
               <li :class="{'active': nowHeaderTab == 2}" @click="clickHeaderTabHandle(2)">种植中心</li>
               <li :class="{'active': nowHeaderTab == 3}" @click="clickHeaderTabHandle(3)">推广中心</li>
               <li :class="{'active': nowHeaderTab == 4}" @click="clickHeaderTabHandle(4)">加工体系</li>
-              <li :class="{'active': nowHeaderTab == 5}" @click="clickHeaderTabHandle(5)">关于我们</li>
+              <li :class="{'active': nowHeaderTab == 5}" @click="clickHeaderTabHandle(5)">专家会商</li>
+              <li :class="{'active': nowHeaderTab == 6}" @click="clickHeaderTabHandle(6)">关于我们</li>
             </ul>
             <span>登录</span>
           </div>
@@ -47,7 +48,7 @@
 
         <ul class="list-box breeding-box">
           <li>
-            <a class="_box">
+            <a href="http://182.92.115.164:8001/#/bigscreen/preview?code=preview_bigScreen_pxXkVHIkYd" target="_blank" class="_box">
               <img src="../../assets/breeding-monitor.png" class="__img" />
               <div class="__con">
                 <p class="___name">可视化监控</p>
@@ -75,9 +76,27 @@
         <h2 class="page-title">旱碱麦种植中心</h2>
         <p class="page-desc">研究为进一步推进盐碱地种植小麦选育、栽培</p>
 
-        <router-link to="/plant/visualization" class="plant-box">
-          <img src="../../assets/plant-img.png" class="__img" />
-        </router-link>
+        <ul class="list-box breeding-box">
+          <li>
+            <a href="http://182.92.115.164:8001/#/bigscreen/preview?code=preview_bigScreen_pxXkVHIkYd" target="_blank" class="_box">
+              <img src="../../assets/plant-img1.jpeg" class="__img __img1" />
+              <div class="__con">
+                <p class="___name">可视化监控</p>
+                <p class="___desc">可视化监控，实时掌握农作物生长状态</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <router-link to="/plant/visualization" class="_box">
+              <img src="../../assets/plant-img.png" class="__img" />
+
+              <div class="__con">
+                <p class="___name">数据</p>
+                <p class="___desc">完备的数据体系，记录农作物生长数据</p>
+              </div>
+            </router-link>
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -109,19 +128,37 @@
     <!-- 种植中心 -->
     <div id="tabRef4" class="floor2-box">
       <div class="max-width m-auto p-b-30">
-        <h2 class="page-title">旱碱麦加工体系</h2>
+        <h2 class="page-title">旱碱麦加工体系联合创新中心</h2>
         <p class="page-desc">研究为进一步推进盐碱地种植小麦选育、栽培</p>
 
-        <div class="plant-box">
-          <img src="../../assets/jg-img.png" class="__img" />
-        </div>
+        <ul class="list-box breeding-box">
+          <li>
+            <a href="http://182.92.115.164:8001/#/bigscreen/preview?code=preview_bigScreen_pxXkVHIkYd" target="_blank" class="_box">
+              <img src="../../assets/img1.png" class="__img __img1" />
+              <div class="__con">
+                <p class="___name">可视化监控</p>
+                <p class="___desc">可视化监控，实时掌握农作物生长状态</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <router-link to="/plant/visualization" class="_box">
+              <img src="../../assets/jg-img.png" class="__img" />
+
+              <div class="__con">
+                <p class="___name">数据</p>
+                <p class="___desc">完备的数据体系，记录农作物生长数据</p>
+              </div>
+            </router-link>
+          </li>
+        </ul>
       </div>
     </div>
 
     <!-- 关于我们 -->
     <div id="tabRef5" class="floor1-box">
       <div class="max-width m-auto p-b-30">
-        <h2 class="page-title">联系我们</h2>
+        <h2 class="page-title">专家会商</h2>
         <p class="page-desc">我们为您提供了个性化的服务，以及全面的技术服务</p>
 
         <div class="plant-box">
@@ -151,6 +188,9 @@
         </div>
       </div>
     </div>
+
+
+    <div id="tabRef6" class="floor1-box"></div>
   </section>
 </template>
 
@@ -340,6 +380,8 @@ watch(() => window.innerWidth, (v) => {
     transition: all 200ms;
     filter: blur(2rem);
   }
+
+  .__img1 {filter: blur(6rem);}
   ._box:hover {
     .__img {
       transform: scale(1.1);

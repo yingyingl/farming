@@ -12,15 +12,21 @@
         <li v-for="item in 6" :key="item">
           <div class="_box">
             <img src="../../assets/zhuanjia.jpg" class="__tx" />
-            <div class="_con">
-              <div class="_con-item">
-                <label>姓名：</label>
-                <p>医生名字</p>
+            <div class="_con-bbb">
+              <div class="_con">
+                <div class="_con-item">
+                  <label>姓名：</label>
+                  <p>医生名字</p>
+                </div>
+
+                <div class="_con-item">
+                  <label>擅长：</label>
+                  <p>小麦生长环境，生长问题，疾病的预防以及治疗</p>
+                </div>
               </div>
 
-              <div class="_con-item">
-                <label>擅长：</label>
-                <p>小麦生长环境，生长问题，疾病的预防以及治疗</p>
+              <div class="btn-box">
+                <el-button type="primary" :disabled="item%2 === 0">{{ item%2 !== 0 ? '在线咨询' : '不在线' }}</el-button>
               </div>
             </div>
           </div>
@@ -107,6 +113,18 @@
       white-space: normal;
       word-break: break-all;
     }
+  }
+
+  ._con-bbb {
+    display: flex;
+    flex-direction: column;
+  }
+  ._con {
+    flex: 1;
+  }
+  .btn-box {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 </style>
