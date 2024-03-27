@@ -31,12 +31,6 @@
         <el-carousel-item class="scroll-item">
           <img src="../../assets/banner1.jpg" class="scroll-img" />
         </el-carousel-item>
-        <el-carousel-item>
-          <img src="../../assets/banner2.png" class="scroll-img" />
-        </el-carousel-item>
-        <el-carousel-item>
-          <img src="../../assets/banner3.png" class="scroll-img" />
-        </el-carousel-item>
       </el-carousel>
     </div>
 
@@ -44,7 +38,7 @@
     <div id="tabRef1" class="floor1-box">
       <div class="max-width m-auto p-b-30">
         <h2 class="page-title">旱碱麦育种体系联合创新中心</h2>
-        <p class="page-desc">研究为进一步推进盐碱地种植小麦选育、栽培</p>
+        <p class="page-desc">为旱碱麦种植选育出运应生态环境、符合市场需求的高品质的旱碱麦品种</p>
 
         <ul class="list-box breeding-box">
           <li>
@@ -74,7 +68,7 @@
     <div id="tabRef2" class="floor2-box">
       <div class="max-width m-auto p-b-30">
         <h2 class="page-title">旱碱麦种植中心</h2>
-        <p class="page-desc">研究为进一步推进盐碱地种植小麦选育、栽培</p>
+        <p class="page-desc">集成各方资源和技术，有效地提高旱碱麦加工水平，促进加工行业技术升级。</p>
 
         <ul class="list-box breeding-box">
           <li>
@@ -129,7 +123,7 @@
     <div id="tabRef4" class="floor2-box">
       <div class="max-width m-auto p-b-30">
         <h2 class="page-title">旱碱麦加工体系联合创新中心</h2>
-        <p class="page-desc">研究为进一步推进盐碱地种植小麦选育、栽培</p>
+        <p class="page-desc">集成各方资源和技术，有效地提高旱碱麦加工水平，促进加工行业技术升级</p>
 
         <ul class="list-box breeding-box">
           <li>
@@ -167,21 +161,18 @@
               <img src="../../assets/hy-bg.jpg" class="__bg" />
               <a href="https://meeting.tencent.com/dm/lE1p03KSb6yv" class="__logo-box">
                 <img src="../../assets/tx-logo.png" class="__logo" />
-                腾讯会议
               </a>
             </el-carousel-item>
             <el-carousel-item class="_item">
               <img src="../../assets/hy-bg2.png" class="__bg" />
               <a href="https://meeting.tencent.com/dm/lE1p03KSb6yv" class="__logo-box">
                 <img src="../../assets/dd-logo.jpg" class="__logo" />
-                钉钉会议
               </a>
             </el-carousel-item>
             <el-carousel-item class="_item">
               <img src="../../assets/hy-bg3.png" class="__bg" />
               <a href="https://meeting.tencent.com/dm/lE1p03KSb6yv" class="__logo-box">
                 <img src="../../assets/tw-logo.png" class="__logo" />
-                WeLink
               </a>
             </el-carousel-item>
           </el-carousel>
@@ -251,7 +242,7 @@ watch(() => window.innerWidth, (v) => {
 
 }
 .logo {
-  width: 100rem;
+  height: 40rem;
   cursor: pointer;
 }
 .menu-container {
@@ -285,7 +276,6 @@ watch(() => window.innerWidth, (v) => {
     flex: 1;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 
     li {
       border-radius: 6rem;
