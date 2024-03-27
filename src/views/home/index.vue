@@ -159,19 +159,19 @@
           <el-carousel type="card" height="400px" class="concat-box" trigger="hover" :autoplay="false" indicator-position="none">
             <el-carousel-item class="_item">
               <img src="../../assets/hy-bg.jpg" class="__bg" />
-              <a href="https://meeting.tencent.com/dm/lE1p03KSb6yv" class="__logo-box">
+              <a href="https://meeting.tencent.com/dm/lE1p03KSb6yv" target="_blank" class="__logo-box">
                 <img src="../../assets/tx-logo.png" class="__logo" />
               </a>
             </el-carousel-item>
             <el-carousel-item class="_item">
               <img src="../../assets/hy-bg2.png" class="__bg" />
-              <a href="WeMeet://WeMeet" class="__logo-box">
+              <a href="WeMeet://WeMeet" target="_blank" class="__logo-box">
                 <img src="../../assets/dd-logo.jpg" class="__logo" />
               </a>
             </el-carousel-item>
             <el-carousel-item class="_item">
               <img src="../../assets/hy-bg3.png" class="__bg" />
-              <a href="https://meeting.tencent.com/dm/lE1p03KSb6yv" class="__logo-box">
+              <a href="https://meeting.tencent.com/dm/lE1p03KSb6yv" target="_blank" class="__logo-box">
                 <img src="../../assets/tw-logo.png" class="__logo" />
               </a>
             </el-carousel-item>

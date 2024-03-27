@@ -8,7 +8,7 @@
     
     <div class="max-width m-auto p-lr-20 p-b-20 page-main">
       <h2 class="page-title">旱碱麦种植中心</h2>
-      <p class="page-desc">研究为进一步推进盐碱地种植小麦选育、栽培</p>
+      <p class="page-desc">密切关注旱碱麦种植业相关数据</p>
 
       <ul class="content-box">
         <li>
