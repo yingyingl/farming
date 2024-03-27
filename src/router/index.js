@@ -5,41 +5,27 @@ import {
 
 /* Layout */
 import Layout from '../layout'
+import LayoutHome from '../layout/index-home'
 
 const routes = [
   {
     path: '/',
     name: 'index',
-    redirect: '/index'
-  },
-  {
-    path: '/',
-    name: 'Home',
     redirect: '/index',
-    component: Layout,
+    component: LayoutHome,
     children: [
       {
         path: 'index',
         name: 'HomeIndex',
         component: () => import(/* webpackChunkName: "docs-index" */ '@/views/home/index.vue')
-      },
-
-
-      {
-        path: 'breeding',
-        name: 'BreedingIndex',
-        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/breeding/index.vue')
-      },
-      {
-        path: 'breeding/monitor',
-        name: 'BreedingMonitor',
-        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/breeding/monitor.vue')
-      },
-      {
-        path: 'breeding/expert',
-        name: 'BreedingExpert',
-        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/breeding/expert.vue')
-      },
+      }
+    ]
+  },
+  {
+    path: '/',
+    name: 'Home',
+    component: Layout,
+    children: [
       {
         path: 'breeding/data',
         name: 'BreedingData',

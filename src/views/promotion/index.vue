@@ -5,18 +5,8 @@
     </div>
     
     <div class="max-width m-auto p-lr-20 p-b-20 page-main">
-      <p class="t-right m-t-10"><router-link to="/promotion/study">在线学习</router-link></p>
       <h2 class="page-title">旱碱麦推广中心专家问答</h2>
       <p class="page-desc">问答系统中保存专家的姓名、专业、擅长领域等信息，要求可以实时在线回答农民提出的问题</p>
-
-      <div class="filter-box">
-        <div class="flex">
-          <strong>地区</strong>
-        </div>
-        <div class="flex">
-          <strong>疾病</strong>
-        </div>
-      </div>
 
       <ul class="list-box">
         <li></li>
