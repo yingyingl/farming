@@ -68,7 +68,7 @@
     <div id="tabRef2" class="floor2-box">
       <div class="max-width m-auto p-b-30">
         <h2 class="page-title">旱碱麦种植中心</h2>
-        <p class="page-desc">集成各方资源和技术，有效地提高旱碱麦加工水平，促进加工行业技术升级。</p>
+        <p class="page-desc">密切关注旱碱麦种植业相关数据</p>
 
         <ul class="list-box breeding-box">
           <li>
