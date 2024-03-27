@@ -5,7 +5,6 @@
     </div>
     
     <div class="max-width m-auto p-lr-20 p-b-20 page-main">
-      <p class="t-right m-t-10"><router-link to="/promotion">专家问答</router-link></p>
       <h2 class="page-title">旱碱麦推广中心在线学习</h2>
       <p class="page-desc">学习系统中，可以在线浏览农业种植技术规程、PPT课件、栽培技术等文本学习资料，浏览图片、学习视频</p>
 

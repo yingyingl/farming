@@ -9,7 +9,22 @@
       <p class="page-desc">问答系统中保存专家的姓名、专业、擅长领域等信息，要求可以实时在线回答农民提出的问题</p>
 
       <ul class="list-box">
-        <li></li>
+        <li v-for="item in 6" :key="item">
+          <div class="_box">
+            <img src="../../assets/zhuanjia.jpg" class="__tx" />
+            <div class="_con">
+              <div class="_con-item">
+                <label>姓名：</label>
+                <p>医生名字</p>
+              </div>
+
+              <div class="_con-item">
+                <label>擅长：</label>
+                <p>小麦生长环境，生长问题，疾病的预防以及治疗</p>
+              </div>
+            </div>
+          </div>
+        </li>
       </ul>
     </div>
   </section>
@@ -57,8 +72,41 @@
   border-bottom: 10rem solid @main-border-color;
   padding: 20rem;
 }
+.list-box {
+  display: flex;
+  flex-wrap: wrap;
 
-.list-box li {
-  
+  li {
+    width: 50%;
+    padding: 0 20rem 20rem;
+  }
+  ._box {
+    display: flex;
+    padding: 20rem 30rem;
+    box-shadow: 0 9px 28px 8px rgba(6,22,64,.05), 0 6px 16px 0 rgba(6,22,64,.08), 0 3px 6px -4px rgba(6,22,64,.12);
+  }
+  .__tx {
+    width: 30%;
+    margin-right: 10rem;
+  }
+  ._name {
+    font-size: 30rem;
+  }
+  ._con-item {
+    display: flex;
+    padding-bottom: 8rem;
+    font-size: 14rem;
+    color: #333;
+
+    label {
+      flex-shrink: 0;
+      width: 60rem;
+      font-weight: bold;
+    }
+    p {
+      white-space: normal;
+      word-break: break-all;
+    }
+  }
 }
 </style>
