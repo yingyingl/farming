@@ -47,9 +47,9 @@ const routes = [
 
 
       {
-        path: 'process',
-        name: 'ProcessIndex',
-        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/process/index.vue')
+        path: 'process/data',
+        name: 'ProcessData',
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/process/data.vue')
       },
       {
         path: 'promotion',

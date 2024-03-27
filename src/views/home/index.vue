@@ -142,7 +142,7 @@
             </a>
           </li>
           <li>
-            <router-link to="/plant/visualization" class="_box">
+            <router-link to="/process/data" class="_box">
               <img src="../../assets/jg-img.png" class="__img" />
 
               <div class="__con">
