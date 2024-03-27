@@ -401,7 +401,7 @@ watch(() => window.innerWidth, (v) => {
     z-index: 0;
     width: 100%;
     height: 100%;
-    filter: blur(10rem);
+    filter: blur(6rem);
   }
   .__logo-box {
     position: relative;
