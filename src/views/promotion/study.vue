@@ -15,7 +15,7 @@
 
     <div class="t-right m-b-20" style="display: flex; justify-content: center;">
       <el-pagination
-        small
+        large
         background
         layout="prev, pager, next"
         :total="50"
@@ -67,8 +67,9 @@
   flex-wrap: wrap;
   li {
     width: 50%;
-    padding: 8rem ;
+    padding: 10rem;
     cursor: pointer;
+    font-size: 16rem;
   }
 }
 </style>
