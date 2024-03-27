@@ -3,10 +3,13 @@
     <div class="max-width m-auto page-main">
       <el-carousel height="700rem" class="scroll-box m-b-30">
         <el-carousel-item class="scroll-item">
-          <img src="../../assets/banner1.png" class="scroll-img" />
+          <img src="../../assets/banner1.jpg" class="scroll-img" />
         </el-carousel-item>
         <el-carousel-item>
           <img src="../../assets/banner2.png" class="scroll-img" />
+        </el-carousel-item>
+        <el-carousel-item>
+          <img src="../../assets/banner3.png" class="scroll-img" />
         </el-carousel-item>
       </el-carousel>
 
