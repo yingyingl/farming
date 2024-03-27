@@ -1,7 +1,9 @@
 <template>
   <section class="page-container">
-    <div class="page-banner-box">
-      <img src="../../assets/breeding-banner.png" class="page-banner" />
+    <div class="max-width m-auto">
+      <div class="page-banner-box">
+        <img src="../../assets/breeding-banner.png" class="page-banner" />
+      </div>
     </div>
     
     <div class="max-width m-auto p-lr-20 p-b-20 page-main">
@@ -42,12 +44,10 @@
 .page-container {
   flex: 1;
   min-height: 0;
-  display: flex;
-  flex-direction: column;
 }
 .page-banner-box {
   width: 100%;
-  height: 240rem;
+  max-height: 240rem;
   overflow: hidden;
 }
 .page-banner {

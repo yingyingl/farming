@@ -1,10 +1,12 @@
 <template>
   <section class="page-container">
-    <div class="max-width m-auto p-lr-20 p-b-20 page-main">
+    <div class="max-width m-auto">
       <div class="page-banner-box">
         <img src="../../assets/breeding-banner.png" class="page-banner" />
       </div>
+    </div>
 
+    <div class="max-width m-auto p-lr-20 p-b-20 page-main">
       <h2 class="page-title">旱碱麦育种体系联合创新中心数据</h2>
 
       <el-form class="form-box" size="large">
