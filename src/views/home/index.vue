@@ -1,481 +1,307 @@
 <template>
-  <section class="page-container">
-    <!-- 头部 -->
-    <div class="header-null-box"></div>
-    <section class="header-container">
-      <div class="max-width m-auto header-main">
+  <section class="home-container">
+    <div class="max-width m-auto home-main">
+      <div class="home-header">
         <h1 class="logo-box">
-          <router-link to="/"><img src="../../assets/logo.png" class="logo" /></router-link>
+          <img src="../../assets/home/logo.png" class="logo" />
         </h1>
+        <span class="header-ani"></span>
+      </div>
 
-        <div class="menu-container">
-          <div class="menu-btn" @click="showMenuHandle"><i></i><i></i><i></i></div>
-          <div class="menu-box" v-if="showMunuBox">
-            <ul>
-              <li :class="{'active': nowHeaderTab == 0}" @click="clickHeaderTabHandle(0)">首页</li>
-              <li :class="{'active': nowHeaderTab == 1}" @click="clickHeaderTabHandle(1)">育种体系</li>
-              <li :class="{'active': nowHeaderTab == 2}" @click="clickHeaderTabHandle(2)">种植中心</li>
-              <li :class="{'active': nowHeaderTab == 3}" @click="clickHeaderTabHandle(3)">推广中心</li>
-              <li :class="{'active': nowHeaderTab == 4}" @click="clickHeaderTabHandle(4)">加工体系</li>
-              <li :class="{'active': nowHeaderTab == 5}" @click="clickHeaderTabHandle(5)">专家会商</li>
-              <li :class="{'active': nowHeaderTab == 6}" @click="clickHeaderTabHandle(6)">关于我们</li>
-            </ul>
-            <span>登录</span>
+
+      <div class="home-center">
+        <img src="../../assets/home/center-left.png" class="arrow-img arrow-left" />
+
+        <div class="center-main">
+          <div class="center-left">
+            <div class="center-menu left-top" @mouseover="hoverMenu(1)">
+              <h2 class="center-menu-title">旱碱麦育种体系<br/>联合创新中心管理系统</h2>
+              <h3 class="center-menu-desc">Drought alkali wheat breeding system Joint<br/> Innovation Center Management System</h3>
+            </div>
+            <div class="center-menu left-bottom" @mouseover="hoverMenu(3)">
+              <h2 class="center-menu-title">旱碱麦<br/>种植中心管理系统</h2>
+              <h3 class="center-menu-desc">Drought alkali wheatPlanting Center<br/> Management System</h3>
+            </div>
+          </div>
+
+          <div class="center-content">
+            <img src="../../assets/home/center-bg-v6.png" class="center-img-ani img-ani-v6" />
+            <img src="../../assets/home/center-bg-v5.png" class="center-img-ani img-ani-v5" />
+            <img src="../../assets/home/center-bg-v4.png" class="center-img-ani img-ani-v4" />
+            <img src="../../assets/home/center-bg-v3.png" class="center-img-ani img-ani-v3" />
+            <img src="../../assets/home/center-bg-v2.png" class="center-img-ani img-ani-v2" />
+
+            <img src="../../assets/home/menu-img1.png" class="center-img-ani menu-img" v-if="!menuType || menuType == 1" />
+            <img src="../../assets/home/menu-img2.png" class="center-img-ani menu-img" v-if="!menuType || menuType == 2" />
+            <img src="../../assets/home/menu-img3.png" class="center-img-ani menu-img" v-if="!menuType || menuType == 3" />
+            <img src="../../assets/home/menu-img4.png" class="center-img-ani menu-img" v-if="!menuType || menuType == 4" />
+          </div>
+
+          <div class="center-right">
+            <div class="center-menu right-top" @mouseover="hoverMenu(2)">
+              <h2 class="center-menu-title">旱碱麦<br/>推广中心管理系统</h2>
+              <h3 class="center-menu-desc">Management system for drought alkali<br/> wheat promotion center</h3>
+            </div>
+            <div class="center-menu right-bottom" @mouseover="hoverMenu(4)">
+              <h2 class="center-menu-title">旱碱麦加工体系<br/>联合创新中心管理系统</h2>
+              <h3 class="center-menu-desc">Dry alkali wheat processing systemJoint<br/> Innovation Center Management System</h3>
+            </div>
           </div>
         </div>
+
+        <img src="../../assets/home/center-right.png" class="arrow-img arrow-right" />
       </div>
-    </section>
-    
-    <div class="max-width m-auto page-main">
-      <el-carousel height="600rem" class="scroll-box">
-        <el-carousel-item class="scroll-item">
-          <img src="../../assets/banner1.jpg" class="scroll-img" />
-        </el-carousel-item>
-      </el-carousel>
+
+
+      <div class="home-footer"></div>
     </div>
-
-    <!-- 育种体系 -->
-    <div id="tabRef1" class="floor1-box">
-      <div class="max-width m-auto p-b-30">
-        <h2 class="page-title">旱碱麦育种体系联合创新中心</h2>
-        <p class="page-desc">为旱碱麦种植选育出运应生态环境、符合市场需求的高品质的旱碱麦品种</p>
-
-        <ul class="list-box breeding-box">
-          <li>
-            <a href="http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_pxXkVHIkYd" target="_blank" class="_box">
-              <img src="../../assets/breeding-monitor.png" class="__img" />
-              <div class="__con">
-                <p class="___name">可视化监控</p>
-                <p class="___desc">可视化监控，实时掌握农作物生长状态</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <router-link to="breeding/data" class="_box">
-              <img src="../../assets/breeding-data.jpg" class="__img" />
-
-              <div class="__con">
-                <p class="___name">数据</p>
-                <p class="___desc">完备的数据体系，记录农作物生长数据</p>
-              </div>
-            </router-link>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- 种植中心 -->
-    <div id="tabRef2" class="floor2-box">
-      <div class="max-width m-auto p-b-30">
-        <h2 class="page-title">旱碱麦种植中心</h2>
-        <p class="page-desc">密切关注旱碱麦种植业相关数据</p>
-
-        <ul class="list-box breeding-box">
-          <li>
-            <a href="http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_4DrCdi0bxm" target="_blank" class="_box">
-              <img src="../../assets/plant-img1.jpeg" class="__img __img1" />
-              <div class="__con">
-                <p class="___name">可视化监控</p>
-                <p class="___desc">可视化监控，实时掌握农作物生长状态</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <router-link to="/plant/visualization" class="_box">
-              <img src="../../assets/plant-img.png" class="__img" />
-
-              <div class="__con">
-                <p class="___name">数据</p>
-                <p class="___desc">完备的数据体系，记录农作物生长数据</p>
-              </div>
-            </router-link>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- 推广中心 -->
-    <div id="tabRef3" class="floor1-box">
-      <div class="max-width m-auto p-b-30">
-        <h2 class="page-title">旱碱麦推广中心 </h2>
-        <p class="page-desc">通过试验、示范、培训、指导以及咨询服务等方式,将农业技术普及应用于农业生产产前、产中、产后全过程</p>
-
-        <ul class="list-box promotion-box">
-          <li>
-            <router-link to="promotion" class="_box">
-              <img src="../../assets/tg-img1.png" class="__img" />
-              <p class="__name">专家问答</p>
-              <p class="__desc">问答系统中保存专家的姓名、专业、擅长领域等信息，要求可以实时在线回答农民提出的问题</p>
-            </router-link>
-          </li>
-          <li>
-            <router-link to="promotion/study" class="_box">
-              <img src="../../assets/tg-img2.png" class="__img" />
-              <p class="__name">在线学习</p>
-              <p class="__desc">学习系统中，可以在线浏览农业种植技术规程、PPT课件、栽培技术等文本学习资料，浏览图片、学习视频</p>
-            </router-link>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- 种植中心 -->
-    <div id="tabRef4" class="floor2-box">
-      <div class="max-width m-auto p-b-30">
-        <h2 class="page-title">旱碱麦加工体系联合创新中心</h2>
-        <p class="page-desc">集成各方资源和技术，有效地提高旱碱麦加工水平，促进加工行业技术升级</p>
-
-        <ul class="list-box breeding-box">
-          <li>
-            <a href="http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_hSy2Yq2Wcv" target="_blank" class="_box">
-              <img src="../../assets/img1.png" class="__img __img1" />
-              <div class="__con">
-                <p class="___name">可视化监控</p>
-                <p class="___desc">可视化监控，实时掌握农作物生长状态</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <router-link to="/process/data" class="_box">
-              <img src="../../assets/jg-img.png" class="__img" />
-
-              <div class="__con">
-                <p class="___name">数据</p>
-                <p class="___desc">完备的数据体系，记录农作物生长数据</p>
-              </div>
-            </router-link>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- 关于我们 -->
-    <div id="tabRef5" class="floor1-box">
-      <div class="max-width m-auto p-b-30">
-        <h2 class="page-title">专家会商</h2>
-        <p class="page-desc">我们为您提供了个性化的服务，以及全面的技术服务</p>
-
-        <div class="plant-box">
-          <el-carousel type="card" height="400px" class="concat-box" trigger="hover" :autoplay="false" indicator-position="none">
-            <el-carousel-item class="_item">
-              <img src="../../assets/hy-bg.jpg" class="__bg" />
-              <a href="https://meeting.tencent.com/dm/lE1p03KSb6yv" target="_blank" class="__logo-box">
-                <img src="../../assets/tx-logo.png" class="__logo" />
-              </a>
-            </el-carousel-item>
-            <el-carousel-item class="_item">
-              <img src="../../assets/hy-bg2.png" class="__bg" />
-              <a href="WeMeet://WeMeet" target="_blank" class="__logo-box">
-                <img src="../../assets/dd-logo.jpg" class="__logo" />
-              </a>
-            </el-carousel-item>
-            <el-carousel-item class="_item">
-              <img src="../../assets/hy-bg3.png" class="__bg" />
-              <a href="https://meeting.tencent.com/dm/lE1p03KSb6yv" target="_blank" class="__logo-box">
-                <img src="../../assets/tw-logo.png" class="__logo" />
-              </a>
-            </el-carousel-item>
-          </el-carousel>
-        </div>
-      </div>
-    </div>
-
-
-    <div id="tabRef6" class="floor1-box"></div>
   </section>
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router'
 
-const $router = useRouter()
-const showMunuBox = ref(window.innerWidth > 767)
-const showMenuHandle = () => {
-  showMunuBox.value = !showMunuBox.value
+const menuType = ref(1)
+const hoverMenu = (type) => {
+  menuType.value = type
 }
 
-const nowHeaderTab = ref(0)
-const clickHeaderTabHandle = (type) => {
-  nowHeaderTab.value = type
-  if (type && type > 0) {
-    window.scrollTo({
-      behavior: 'smooth',
-      top: document.getElementById('tabRef' + type).offsetTop - 50
-    })
-  } else {
-    window.scrollTo({
-      behavior: 'smooth',
-      top: 0
-    })
-  }
-}
-
-watch(() => window.innerWidth, (v) => {
-  showMunuBox.value = v > 767
-})
 </script>
 
 <style scoped lang="less">
-.header-null-box {
-  flex-shrink: 0;
-  height: 70rem;
-}
-.header-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  width: 100%;
-  flex-shrink: 0;
-  background-color: rgba(6, 22, 64, .88);
-  margin-bottom: 10rem;
-}
-.header-main {
-  width: 100%;
-  height: 70rem;
+.home-container {
+  flex: 1;
+  background: #0D1B31;
   display: flex;
-  align-items: center;
-  padding: 0 20rem;
+  flex-direction: column;
 }
-.logo-box {
-  font-size: 0;
-
+.home-main {
+  width: 1920px;
+  height: 1080px;
+  display: flex;
+  flex-direction: column;
+  background: #0D1B31;
 }
-.logo {
-  height: 40rem;
-  cursor: pointer;
-}
-.menu-container {
+.home-header {
   position: relative;
-  flex: 1;
+  height: 83px;
+  background: url('../../assets/home/header-bg.png') no-repeat center;
+  background-size: auto 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-}
-.menu-btn {
-  width: 22rem;
-  cursor: pointer;
-  display: none;
-
-  i {
-    width: 100%;
-    height: 2rem;
-    margin-top: 3rem;
-    display: block;
-    background-color: @main-color;
-  }
-}
-.menu-box {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  align-items: center;
-  color: @main-color;
-
-  ul {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-
-    li {
-      border-radius: 6rem;
-      overflow: hidden;
-      cursor: pointer;
-      margin-left: 4rem;
-      transition: all 200ms;
-      height: 40rem;
-      line-height: 40rem;
-      padding: 0 20rem;
-      color: @white-color;
-    }
-    li.active, li:hover {
-      color: @main-color;
-      font-weight: 600;
-    }
-  }
-}
-
-.scroll-img {
-  width: 100%;
-  height: 100%;
-}
-.floor1-box {
-  background-color: #F2F2F2;
-}
-.page-title {
-  font-size: 36rem;
-  color: #061640;
-  text-align: center;
-  padding: 84rem 0 20rem 0;
-}
-.page-desc {
-  line-height: 40rem;
-  font-size: 20rem;
-  color: @main-color;
-  text-align: center;
-  padding-bottom: 40rem;
-}
-
-.list-box {
-  display: flex;
   justify-content: center;
-
-  li {
-    width: 50%;
-    max-width: 600rem;
-    padding: 0 20rem;
-  }
-  ._box {
-    position: relative;
-    cursor: pointer;
-    display: block;
-    overflow: hidden;
-    border-radius: 4rem;
-  }
-  .__img {
-    width: 100%;
-  }
-}
-
-.plant-box {
-  position: relative;
-  width: 100%;
-  border-radius: 4rem;
   overflow: hidden;
 
-  .__img {
-    width: 100%;
+  .logo {
+    height: 44px;
   }
-}
 
-.breeding-box {
-  .__con {
+  .header-ani {
     position: absolute;
+    left: -300px;
     bottom: 0;
-    left: 0;
     z-index: 1;
-    width: 100%;
-    color: @white-color;
-    font-size: 20rem;
-    padding: 0 50rem 50rem;
-    transition: all 200ms;
+    width: 300px;
+    height: 2px;
+    background: url('../../assets/home/header-ani.png') no-repeat center;
+    background-size: 100%;
+    animation: headerAni 4s infinite;
+  }
+}
+
+@keyframes headerAni {
+  from { left: -300px; }
+  to { left: 110%; }
+}
+
+
+.home-center {
+  flex: 1;
+  padding: 70px 15px 0;
+  display: flex;
+  align-items: center;
+}
+.arrow-img {
+  width: 46px;
+}
+.center-main {
+  flex: 1;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+}
+
+.center-left, .center-right {
+  flex-shrink: 0;
+  width: 592px;
+}
+.center-left {
+  .center-menu-title, .center-menu-desc  {
+    text-align: right;
+  }
+}
+.center-menu {
+  width: 592px;
+  height: 397px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  transition: all 300ms;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+
+  .center-menu-title {
+    font-family: 'tx-Medium';
+    font-size: 36px;
+    color: #4375C5;
+    line-height: 50px;
+    transition: all 300ms;
+  }
+  .center-menu-desc {
+    font-family: DINPro-Regular;
+    font-weight: 400;
+    font-size: 18px;
+    color: #2A569C;
+    line-height: 23px;
+    margin-top: 20px;
+    transition: all 300ms;
   }
 
-  .___name {
-    font-size: 26rem;
-    font-weight: bold;
-    margin-bottom: 10rem;
-  }
-  .__img {
-    transition: all 200ms;
-    filter: blur(2rem);
-  }
+  &:hover {
+    transition: all 300ms;
 
-  .__img1 {filter: blur(6rem);}
-  ._box:hover {
-    .__img {
-      transform: scale(1.1);
+    .center-menu-title {
+      background: -webkit-linear-gradient(top, #F7FFFF 0%, #A0DEF6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 300ms;
     }
-    .__con {
-      bottom: 40rem;
-    }
+    .center-menu-desc { color: #fff; transition: all 300ms; }
+  }
+
+  &.left-top {
+    margin-bottom: 30px;
+    background-image: url('../../assets/home/left-top.png');
+    padding-right: 230px;
+    align-items: flex-end;
+  }
+  &.left-top:hover {
+    background-image: url('../../assets/home/left-top-active.png');
+  }
+  &.left-bottom {
+    background-image: url('../../assets/home/left-bottom.png');
+    padding-right: 230px;
+    align-items: flex-end;
+  }
+  &.left-bottom:hover {
+    background-image: url('../../assets/home/left-bottom-active.png');
+  }
+  &.right-top {
+    margin-bottom: 30px;
+    background-image: url('../../assets/home/right-top.png');
+    padding-left: 230px;
+  }
+  &.right-top:hover {
+    margin-bottom: 30px;
+    background-image: url('../../assets/home/right-top-active.png');
+  }
+  &.right-bottom {
+    background-image: url('../../assets/home/right-bottom.png');
+    padding-left: 230px;
+  }
+  &.right-bottom:hover {
+    background-image: url('../../assets/home/right-bottom-active.png');
   }
 }
 
-.promotion-box {
-  ._box {
-    background: @white-bg;
-    transition: all 200ms;
-  }
-  .__name {
-    font-size: 28rem;
-    font-weight: bold;
-    padding: 10rem 20rem 0;
-    color: #333;
-  }
-  .__desc {
-    font-size: 20rem;
-    padding: 10rem 20rem 20rem;
-    color: #333;
-  }
-  ._box:hover {
-    box-shadow: 0 9px 28px 8px rgba(6,22,64,.05), 0 6px 16px 0 rgba(6,22,64,.08), 0 3px 6px -4px rgba(6,22,64,.12);
-    transform: scale(1.02);
-  }
+.center-content {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -160px;
 }
 
-
-.concat-box {
-  .el-carousel__item h3 {
-    color: #475669;
-    opacity: 0.75;
-    line-height: 200px;
-    margin: 0;
-    text-align: center;
-  }
-
-  .el-carousel__item:nth-child(2n) {
-  }
-
-  .el-carousel__item:nth-child(2n + 1) {
-  }
-  ._item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10rem;
-    overflow: hidden;
-  }
-  .__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    filter: blur(4rem);
-  }
-  .__logo-box {
-    position: relative;
-    z-index: 1;
-    color: #fff;
-    font-size: 20rem;
-    font-weight: bold;
-    text-align: center;
-  }
-  .__logo {
-    width: 120rem;
-    height: 120rem;
-    display: block;
-    margin-bottom: 10rem;
-  }
+.center-img-ani {
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
+.img-ani-v6 {
+  width: 926px;
+  height: 762px;
+  margin-top: -381px;
+  margin-left: -463px;
+  z-index: 6;
+  animation: imgAniV6 20s linear infinite;
+}
+@keyframes imgAniV6 {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
+
+.img-ani-v5 {
+  width: 828px;
+  height: 828px;
+  margin-top: -414px;
+  margin-left: -414px;
+  z-index: 5;
+  animation: imgAniV6 14s linear infinite;
+}
+
+.img-ani-v4 {
+  width: 758px;
+  height: 758px;
+  margin-top: -379px;
+  margin-left: -379px;
+  z-index: 4;
+  animation: imgAniV6 8s linear infinite;
+}
+.img-ani-v3 {
+  width: 804px;
+  height: 804px;
+  margin-top: -402px;
+  margin-left: -402px;
+  z-index: 3;
+  animation: imgAniV6 4s linear infinite;
+}
+.img-ani-v2 {
+  width: 576px;
+  height: 576px;
+  margin-top: -288px;
+  margin-left: -288px;
+  z-index: 2;
+  animation: imgAniV6 5s linear infinite;
+}
+
+.menu-img {
+  width: 576px;
+  height: 576px;
+  margin-top: -288px;
+  margin-left: -288px;
+  z-index: 1;
+  animation: imgMenu 3s linear infinite, fadeIn 1s;
+}
+@keyframes imgMenu {
+  0%, 100%  { transform: translateY(-10px); }
+  40% { transform: translateY(30px); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.home-footer {
+  height: 65px;
+  background: url('../../assets/home/bottom-bg.png') no-repeat center;
+  background-size: auto 100%;
+  margin: 15px;
+}
 
 @media screen and (max-width: 767px) {
-  .menu-btn {
-    display: block;
-  }
-  .menu-box  {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    z-index: 1;
-    padding: 6rem 8rem;
-    background-color: rgba(6, 22, 64, .88);
-    border: 1px solid #999;
-    border-radius: 10rem;
-
-    ul {
-      display: block;
-    }
-    li {
-      text-align: center;
-      margin-left: 0;
-      margin-top: 4rem;
-    }
-  }
+ 
 }
-
-
 </style>

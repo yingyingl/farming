@@ -5,8 +5,6 @@
         <router-view />
       </el-config-provider>
     </div>
-
-    <Footer class="layout-footer"></Footer>
   </div>
 </template>
 
