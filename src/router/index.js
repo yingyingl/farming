@@ -17,7 +17,12 @@ const routes = [
       {
         path: 'index',
         name: 'HomeIndex',
-        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/home/index.vue')
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/index.vue')
+      },
+      {
+        path: 'login',
+        name: 'login',
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/login.vue')
       }
     ]
   },
@@ -79,12 +84,18 @@ const router = createRouter({
 
 
 router.beforeEach(async (to, from, next) => {
-  const token = to.query.token || ''
+  const token = localStorage.getItem('adminToken')
+
+  if (!token && to.path !== '/login') {
+    next(`/login?redirect=${to.path}`)
+  } else {
+    next()
+  }
  
  // if (whiteList.indexOf(to.path) === -1 && to.path !== '/login' && !token) {
  //   next(`/login?redirect=${to.path}`)
  // } else {
-    next()
+   // next()
  // }
 })
 

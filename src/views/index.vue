@@ -3,14 +3,16 @@
     <div class="max-width m-auto home-main" :style="documentScale">
       <div class="home-header">
         <h1 class="logo-box">
-          <img src="../../assets/home/logo.png" class="logo" />
+          <img src="../assets/home/logo.png" class="logo" />
         </h1>
         <span class="header-ani"></span>
+
+        <span class="gologin" @click="gologin">{{ userName || '登录' }}</span>
       </div>
 
 
       <div class="home-center">
-        <img src="../../assets/home/center-left.png" class="arrow-img arrow-left" />
+        <img src="../assets/home/center-left.png" class="arrow-img arrow-left" />
 
         <div class="center-main">
           <div class="center-left">
@@ -25,16 +27,16 @@
           </div>
 
           <div class="center-content">
-            <img src="../../assets/home/center-bg-v6.png" class="center-img-ani img-ani-v6" />
-            <img src="../../assets/home/center-bg-v5.png" class="center-img-ani img-ani-v5" />
-            <img src="../../assets/home/center-bg-v4.png" class="center-img-ani img-ani-v4" />
-            <img src="../../assets/home/center-bg-v3.png" class="center-img-ani img-ani-v3" />
-            <img src="../../assets/home/center-bg-v2.png" class="center-img-ani img-ani-v2" />
+            <img src="../assets/home/center-bg-v6.png" class="center-img-ani img-ani-v6" />
+            <img src="../assets/home/center-bg-v5.png" class="center-img-ani img-ani-v5" />
+            <img src="../assets/home/center-bg-v4.png" class="center-img-ani img-ani-v4" />
+            <img src="../assets/home/center-bg-v3.png" class="center-img-ani img-ani-v3" />
+            <img src="../assets/home/center-bg-v2.png" class="center-img-ani img-ani-v2" />
 
-            <img src="../../assets/home/menu-img1.png" class="center-img-ani menu-img" v-if="!menuType || menuType == 1" />
-            <img src="../../assets/home/menu-img2.png" class="center-img-ani menu-img" v-if="!menuType || menuType == 2" />
-            <img src="../../assets/home/menu-img3.png" class="center-img-ani menu-img" v-if="!menuType || menuType == 3" />
-            <img src="../../assets/home/menu-img4.png" class="center-img-ani menu-img" v-if="!menuType || menuType == 4" />
+            <img src="../assets/home/menu-img1.png" class="center-img-ani menu-img" v-if="!menuType || menuType == 1" />
+            <img src="../assets/home/menu-img2.png" class="center-img-ani menu-img" v-if="!menuType || menuType == 2" />
+            <img src="../assets/home/menu-img3.png" class="center-img-ani menu-img" v-if="!menuType || menuType == 3" />
+            <img src="../assets/home/menu-img4.png" class="center-img-ani menu-img" v-if="!menuType || menuType == 4" />
           </div>
 
           <div class="center-right">
@@ -49,7 +51,7 @@
           </div>
         </div>
 
-        <img src="../../assets/home/center-right.png" class="arrow-img arrow-right" />
+        <img src="../assets/home/center-right.png" class="arrow-img arrow-right" />
       </div>
 
 
@@ -59,10 +61,22 @@
 </template>
 
 <script setup>
+import { useRoute, useRouter } from 'vue-router'
+
+const $router = useRouter()
 
 const menuType = ref(1)
 const hoverMenu = (type) => {
   menuType.value = type
+}
+
+const userName = localStorage.getItem('adminToken')
+const gologin = () => {
+  if (userName) return
+
+  $router.push({
+    path: '/login'
+  })
 }
 
 
@@ -101,7 +115,7 @@ if (window.innerWidth > 1920 && window.innerHeight > 1080) {
 .home-header {
   position: relative;
   height: 83px;
-  background: url('../../assets/home/header-bg.png') no-repeat center;
+  background: url('../assets/home/header-bg.png') no-repeat center;
   background-size: auto 100%;
   display: flex;
   align-items: center;
@@ -119,9 +133,16 @@ if (window.innerWidth > 1920 && window.innerHeight > 1080) {
     z-index: 1;
     width: 300px;
     height: 2px;
-    background: url('../../assets/home/header-ani.png') no-repeat center;
+    background: url('../assets/home/header-ani.png') no-repeat center;
     background-size: 100%;
     animation: headerAni 4s infinite;
+  }
+  .gologin {
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
   }
 }
 
@@ -199,36 +220,36 @@ if (window.innerWidth > 1920 && window.innerHeight > 1080) {
 
   &.left-top {
     margin-bottom: 30px;
-    background-image: url('../../assets/home/left-top.png');
+    background-image: url('../assets/home/left-top.png');
     padding-right: 230px;
     align-items: flex-end;
   }
   &.left-top:hover {
-    background-image: url('../../assets/home/left-top-active.png');
+    background-image: url('../assets/home/left-top-active.png');
   }
   &.left-bottom {
-    background-image: url('../../assets/home/left-bottom.png');
+    background-image: url('../assets/home/left-bottom.png');
     padding-right: 230px;
     align-items: flex-end;
   }
   &.left-bottom:hover {
-    background-image: url('../../assets/home/left-bottom-active.png');
+    background-image: url('../assets/home/left-bottom-active.png');
   }
   &.right-top {
     margin-bottom: 30px;
-    background-image: url('../../assets/home/right-top.png');
+    background-image: url('../assets/home/right-top.png');
     padding-left: 230px;
   }
   &.right-top:hover {
     margin-bottom: 30px;
-    background-image: url('../../assets/home/right-top-active.png');
+    background-image: url('../assets/home/right-top-active.png');
   }
   &.right-bottom {
-    background-image: url('../../assets/home/right-bottom.png');
+    background-image: url('../assets/home/right-bottom.png');
     padding-left: 230px;
   }
   &.right-bottom:hover {
-    background-image: url('../../assets/home/right-bottom-active.png');
+    background-image: url('../assets/home/right-bottom-active.png');
   }
 }
 
@@ -313,10 +334,11 @@ if (window.innerWidth > 1920 && window.innerHeight > 1080) {
 
 .home-footer {
   height: 65px;
-  background: url('../../assets/home/bottom-bg.png') no-repeat center;
+  background: url('../assets/home/bottom-bg.png') no-repeat center;
   background-size: auto 100%;
   margin: 15px;
 }
+
 
 @media screen and (max-width: 767px) {
  
