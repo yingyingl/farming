@@ -1,6 +1,6 @@
 <template>
   <section class="home-container">
-    <div class="max-width m-auto home-main">
+    <div class="max-width m-auto home-main" :style="documentScale">
       <div class="home-header">
         <h1 class="logo-box">
           <img src="../../assets/home/logo.png" class="logo" />
@@ -65,6 +65,23 @@ const hoverMenu = (type) => {
   menuType.value = type
 }
 
+
+const documentScale = ref({})
+if (window.innerWidth > 1920 && window.innerHeight > 1080) {
+  documentScale.value = {}
+} else if (window.innerWidth > 1920 && window.innerHeight < 1080) {
+  const h = (window.innerHeight/1080).toFixed(4)
+  documentScale.value = {
+    transform: 'scale('+ h +')',
+    'transform-origin': 'top center'
+  }
+} else if (window.innerWidth < 1920) {
+  const w = (window.innerWidth/1920).toFixed(4)
+  documentScale.value = {
+    transform: 'scale('+ w +')',
+    'transform-origin': 'top left'
+  }
+}
 </script>
 
 <style scoped lang="less">
