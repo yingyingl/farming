@@ -1,61 +1,46 @@
 <template>
   <section class="home-container">
-    <div class="max-width m-auto home-main" :style="documentScale">
-      <div class="home-header">
-        <h1 class="logo-box">
-          <img src="../assets/home/logo.png" class="logo" />
-        </h1>
-        <span class="header-ani"></span>
+    <div class="max-width m-auto home-main">
+      <img src="../assets/home/center-left.png" class="arrow-img arrow-left" />
 
-        <span class="gologin" @click="gologin">{{ userName || '登录' }}</span>
-      </div>
-
-
-      <div class="home-center">
-        <img src="../assets/home/center-left.png" class="arrow-img arrow-left" />
-
-        <div class="center-main">
-          <div class="center-left">
-            <div class="center-menu left-top" @mouseover="hoverMenu(1)">
-              <h2 class="center-menu-title">旱碱麦育种体系<br/>联合创新中心管理系统</h2>
-              <h3 class="center-menu-desc">Drought alkali wheat breeding system Joint<br/> Innovation Center Management System</h3>
-            </div>
-            <div class="center-menu left-bottom" @mouseover="hoverMenu(3)">
-              <h2 class="center-menu-title">旱碱麦<br/>种植中心管理系统</h2>
-              <h3 class="center-menu-desc">Drought alkali wheatPlanting Center<br/> Management System</h3>
-            </div>
+      <div class="center-main">
+        <div class="center-left">
+          <div class="center-menu left-top" @mouseover="hoverMenu(1)">
+            <h2 class="center-menu-title">旱碱麦育种体系<br/>联合创新中心管理系统</h2>
+            <h3 class="center-menu-desc">Drought alkali wheat breeding system Joint<br/> Innovation Center Management System</h3>
           </div>
-
-          <div class="center-content">
-            <img src="../assets/home/center-bg-v6.png" class="center-img-ani img-ani-v6" />
-            <img src="../assets/home/center-bg-v5.png" class="center-img-ani img-ani-v5" />
-            <img src="../assets/home/center-bg-v4.png" class="center-img-ani img-ani-v4" />
-            <img src="../assets/home/center-bg-v3.png" class="center-img-ani img-ani-v3" />
-            <img src="../assets/home/center-bg-v2.png" class="center-img-ani img-ani-v2" />
-
-            <img src="../assets/home/menu-img1.png" class="center-img-ani menu-img" v-if="!menuType || menuType == 1" />
-            <img src="../assets/home/menu-img2.png" class="center-img-ani menu-img" v-if="!menuType || menuType == 2" />
-            <img src="../assets/home/menu-img3.png" class="center-img-ani menu-img" v-if="!menuType || menuType == 3" />
-            <img src="../assets/home/menu-img4.png" class="center-img-ani menu-img" v-if="!menuType || menuType == 4" />
-          </div>
-
-          <div class="center-right">
-            <div class="center-menu right-top" @mouseover="hoverMenu(2)">
-              <h2 class="center-menu-title">旱碱麦<br/>推广中心管理系统</h2>
-              <h3 class="center-menu-desc">Management system for drought alkali<br/> wheat promotion center</h3>
-            </div>
-            <div class="center-menu right-bottom" @mouseover="hoverMenu(4)">
-              <h2 class="center-menu-title">旱碱麦加工体系<br/>联合创新中心管理系统</h2>
-              <h3 class="center-menu-desc">Dry alkali wheat processing systemJoint<br/> Innovation Center Management System</h3>
-            </div>
+          <div class="center-menu left-bottom" @mouseover="hoverMenu(3)">
+            <h2 class="center-menu-title">旱碱麦<br/>种植中心管理系统</h2>
+            <h3 class="center-menu-desc">Drought alkali wheatPlanting Center<br/> Management System</h3>
           </div>
         </div>
 
-        <img src="../assets/home/center-right.png" class="arrow-img arrow-right" />
+        <div class="center-content">
+          <img src="../assets/home/center-bg-v6.png" class="center-img-ani img-ani-v6" />
+          <img src="../assets/home/center-bg-v5.png" class="center-img-ani img-ani-v5" />
+          <img src="../assets/home/center-bg-v4.png" class="center-img-ani img-ani-v4" />
+          <img src="../assets/home/center-bg-v3.png" class="center-img-ani img-ani-v3" />
+          <img src="../assets/home/center-bg-v2.png" class="center-img-ani img-ani-v2" />
+
+          <img src="../assets/home/menu-img1.png" class="center-img-ani menu-img" v-if="!menuType || menuType == 1" />
+          <img src="../assets/home/menu-img2.png" class="center-img-ani menu-img" v-if="!menuType || menuType == 2" />
+          <img src="../assets/home/menu-img3.png" class="center-img-ani menu-img" v-if="!menuType || menuType == 3" />
+          <img src="../assets/home/menu-img4.png" class="center-img-ani menu-img" v-if="!menuType || menuType == 4" />
+        </div>
+
+        <div class="center-right">
+          <div class="center-menu right-top" @mouseover="hoverMenu(2)">
+            <h2 class="center-menu-title">旱碱麦<br/>推广中心管理系统</h2>
+            <h3 class="center-menu-desc">Management system for drought alkali<br/> wheat promotion center</h3>
+          </div>
+          <div class="center-menu right-bottom" @mouseover="hoverMenu(4)">
+            <h2 class="center-menu-title">旱碱麦加工体系<br/>联合创新中心管理系统</h2>
+            <h3 class="center-menu-desc">Dry alkali wheat processing systemJoint<br/> Innovation Center Management System</h3>
+          </div>
+        </div>
       </div>
 
-
-      <div class="home-footer"></div>
+      <img src="../assets/home/center-right.png" class="arrow-img arrow-right" />
     </div>
   </section>
 </template>
@@ -70,32 +55,7 @@ const hoverMenu = (type) => {
   menuType.value = type
 }
 
-const userName = localStorage.getItem('adminToken')
-const gologin = () => {
-  if (userName) return
 
-  $router.push({
-    path: '/login'
-  })
-}
-
-
-const documentScale = ref({})
-if (window.innerWidth > 1920 && window.innerHeight > 1080) {
-  documentScale.value = {}
-} else if (window.innerWidth > 1920 && window.innerHeight < 1080) {
-  const h = (window.innerHeight/1080).toFixed(4)
-  documentScale.value = {
-    transform: 'scale('+ h +')',
-    'transform-origin': 'top center'
-  }
-} else if (window.innerWidth < 1920) {
-  const w = (window.innerWidth/1920).toFixed(4)
-  documentScale.value = {
-    transform: 'scale('+ w +')',
-    'transform-origin': 'top left'
-  }
-}
 </script>
 
 <style scoped lang="less">
@@ -104,73 +64,31 @@ if (window.innerWidth > 1920 && window.innerHeight > 1080) {
   background: #0D1B31;
   display: flex;
   flex-direction: column;
+  min-height: 880rem;
+  max-height: 960rem;
+  justify-content: flex-end;
 }
 .home-main {
-  width: 1920px;
-  height: 1080px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   background: #0D1B31;
-}
-.home-header {
-  position: relative;
-  height: 83px;
-  background: url('../assets/home/header-bg.png') no-repeat center;
-  background-size: auto 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-
-  .logo {
-    height: 44px;
-  }
-
-  .header-ani {
-    position: absolute;
-    left: -300px;
-    bottom: 0;
-    z-index: 1;
-    width: 300px;
-    height: 2px;
-    background: url('../assets/home/header-ani.png') no-repeat center;
-    background-size: 100%;
-    animation: headerAni 4s infinite;
-  }
-  .gologin {
-    position: absolute;
-    right: 20px;
-    font-size: 20px;
-    color: #fff;
-    cursor: pointer;
-  }
-}
-
-@keyframes headerAni {
-  from { left: -300px; }
-  to { left: 110%; }
-}
-
-
-.home-center {
-  flex: 1;
-  padding: 70px 15px 0;
-  display: flex;
-  align-items: center;
+  padding: 0 15rem 0;
 }
 .arrow-img {
-  width: 46px;
+  flex-shrink: 0;
+  width: 46rem;
 }
 .center-main {
   flex: 1;
-  padding: 0 8px;
+  padding: 0 8rem;
   display: flex;
   align-items: center;
 }
 
 .center-left, .center-right {
   flex-shrink: 0;
-  width: 592px;
+  width: 592rem;
 }
 .center-left {
   .center-menu-title, .center-menu-desc  {
@@ -178,8 +96,8 @@ if (window.innerWidth > 1920 && window.innerHeight > 1080) {
   }
 }
 .center-menu {
-  width: 592px;
-  height: 397px;
+  width: 592rem;
+  height: 397rem;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
@@ -191,18 +109,18 @@ if (window.innerWidth > 1920 && window.innerHeight > 1080) {
 
   .center-menu-title {
     font-family: 'tx-Medium';
-    font-size: 36px;
+    font-size: 36rem;
     color: #4375C5;
-    line-height: 50px;
+    line-height: 50rem;
     transition: all 300ms;
   }
   .center-menu-desc {
     font-family: DINPro-Regular;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 18rem;
     color: #2A569C;
-    line-height: 23px;
-    margin-top: 20px;
+    line-height: 23rem;
+    margin-top: 20rem;
     transition: all 300ms;
   }
 
@@ -219,9 +137,9 @@ if (window.innerWidth > 1920 && window.innerHeight > 1080) {
   }
 
   &.left-top {
-    margin-bottom: 30px;
+    margin-bottom: 30rem;
     background-image: url('../assets/home/left-top.png');
-    padding-right: 230px;
+    padding-right: 230rem;
     align-items: flex-end;
   }
   &.left-top:hover {
@@ -229,24 +147,24 @@ if (window.innerWidth > 1920 && window.innerHeight > 1080) {
   }
   &.left-bottom {
     background-image: url('../assets/home/left-bottom.png');
-    padding-right: 230px;
+    padding-right: 230rem;
     align-items: flex-end;
   }
   &.left-bottom:hover {
     background-image: url('../assets/home/left-bottom-active.png');
   }
   &.right-top {
-    margin-bottom: 30px;
+    margin-bottom: 30rem;
     background-image: url('../assets/home/right-top.png');
-    padding-left: 230px;
+    padding-left: 230rem;
   }
   &.right-top:hover {
-    margin-bottom: 30px;
+    margin-bottom: 30rem;
     background-image: url('../assets/home/right-top-active.png');
   }
   &.right-bottom {
     background-image: url('../assets/home/right-bottom.png');
-    padding-left: 230px;
+    padding-left: 230rem;
   }
   &.right-bottom:hover {
     background-image: url('../assets/home/right-bottom-active.png');
@@ -259,7 +177,7 @@ if (window.innerWidth > 1920 && window.innerHeight > 1080) {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 -160px;
+  margin: 0 -160rem;
 }
 
 .center-img-ani {
@@ -269,10 +187,10 @@ if (window.innerWidth > 1920 && window.innerHeight > 1080) {
 }
 
 .img-ani-v6 {
-  width: 926px;
-  height: 762px;
-  margin-top: -381px;
-  margin-left: -463px;
+  width: 926rem;
+  height: 762rem;
+  margin-top: -381rem;
+  margin-left: -463rem;
   z-index: 6;
   animation: imgAniV6 20s linear infinite;
 }
@@ -282,65 +200,57 @@ if (window.innerWidth > 1920 && window.innerHeight > 1080) {
 }
 
 .img-ani-v5 {
-  width: 828px;
-  height: 828px;
-  margin-top: -414px;
-  margin-left: -414px;
+  width: 828rem;
+  height: 828rem;
+  margin-top: -414rem;
+  margin-left: -414rem;
   z-index: 5;
   animation: imgAniV6 14s linear infinite;
 }
 
 .img-ani-v4 {
-  width: 758px;
-  height: 758px;
-  margin-top: -379px;
-  margin-left: -379px;
+  width: 758rem;
+  height: 758rem;
+  margin-top: -379rem;
+  margin-left: -379rem;
   z-index: 4;
   animation: imgAniV6 8s linear infinite;
 }
 .img-ani-v3 {
-  width: 804px;
-  height: 804px;
-  margin-top: -402px;
-  margin-left: -402px;
+  width: 804rem;
+  height: 804rem;
+  margin-top: -402rem;
+  margin-left: -402rem;
   z-index: 3;
   animation: imgAniV6 4s linear infinite;
 }
 .img-ani-v2 {
-  width: 576px;
-  height: 576px;
-  margin-top: -288px;
-  margin-left: -288px;
+  width: 576rem;
+  height: 576rem;
+  margin-top: -288rem;
+  margin-left: -288rem;
   z-index: 2;
   animation: imgAniV6 5s linear infinite;
 }
 
 .menu-img {
-  width: 576px;
-  height: 576px;
-  margin-top: -288px;
-  margin-left: -288px;
+  width: 576rem;
+  height: 576rem;
+  margin-top: -288rem;
+  margin-left: -288rem;
   z-index: 1;
   animation: imgMenu 3s linear infinite, fadeIn 1s;
 }
 @keyframes imgMenu {
-  0%, 100%  { transform: translateY(-10px); }
-  40% { transform: translateY(30px); }
+  0%, 100%  { transform: translateY(-10rem); }
+  40% { transform: translateY(30rem); }
 }
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-.home-footer {
-  height: 65px;
-  background: url('../assets/home/bottom-bg.png') no-repeat center;
-  background-size: auto 100%;
-  margin: 15px;
-}
-
-
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767rem) {
  
 }
 </style>

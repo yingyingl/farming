@@ -1,9 +1,13 @@
 <template>
   <div class="layout-wrap">
     <div class="layout-main">
+      <Header />
+
       <el-config-provider :locale="zhCn">
         <router-view />
       </el-config-provider>
+
+      <Footer />
     </div>
   </div>
 </template>
@@ -18,8 +22,8 @@ import Footer from './footer.vue'
 
 const setSize = () => {
   let screenWidth = document.documentElement.clientWidth
-  screenWidth = screenWidth > 750 ? 750 : screenWidth
-  const currentFontSize = screenWidth / 750
+  screenWidth = screenWidth > 1920 ? 1920 : screenWidth
+  const currentFontSize = screenWidth / 1920
   document.documentElement.style.fontSize = currentFontSize + 'px'
 }
 setSize()
@@ -35,7 +39,6 @@ onUnmounted(() => {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: rgba(243, 248, 255, .6);
 }
 .layout-main {
   flex: 1;
@@ -44,4 +47,7 @@ onUnmounted(() => {
 }
 @media screen and (max-width: 767px) {
 }
+</style>
+<style>
+body {  background: #0D1B31; }
 </style>

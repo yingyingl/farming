@@ -23,59 +23,17 @@ const routes = [
         path: 'login',
         name: 'login',
         component: () => import(/* webpackChunkName: "docs-index" */ '@/views/login.vue')
-      }
-    ]
-  },
-  {
-    path: '/',
-    name: 'Home',
-    component: Layout,
-    children: [
-      {
-        path: 'breeding/data',
-        name: 'BreedingData',
-        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/breeding/data.vue')
-      },
-
-
-      {
-        path: 'plant',
-        name: 'PlantIndex',
-        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/plant/index.vue')
       },
       {
-        path: 'plant/visualization',
-        name: 'PlantVisualization',
-        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/plant/visualization.vue')
-      },
-
-
-
-      {
-        path: 'process/data',
-        name: 'ProcessData',
-        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/process/data.vue')
-      },
-      {
-        path: 'promotion',
-        name: 'PromotionIndex',
-        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/promotion/index.vue')
-      },
-      {
-        path: 'promotion/study',
-        name: 'PromotionStudy',
-        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/promotion/study.vue')
-      },
-      {
-        path: 'promotion/detail/:id',
-        name: 'PromotionDetail',
-        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/promotion/newsDetail.vue')
+        path: 'manage',
+        name: 'manage',
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/manage.vue')
       }
     ]
   }
 ]
 
-const whiteList = [] // no redirect whitelist
+const whiteList = ['/index', '/manage'] // no redirect whitelist
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
@@ -86,17 +44,11 @@ const router = createRouter({
 router.beforeEach(async (to, from, next) => {
   const token = localStorage.getItem('adminToken')
 
-  if (!token && to.path !== '/login') {
+  if (whiteList.indexOf(to.path) === -1 && to.path !== '/login' && !token) {
     next(`/login?redirect=${to.path}`)
   } else {
     next()
   }
- 
- // if (whiteList.indexOf(to.path) === -1 && to.path !== '/login' && !token) {
- //   next(`/login?redirect=${to.path}`)
- // } else {
-   // next()
- // }
 })
 
 export default router

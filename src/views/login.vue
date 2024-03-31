@@ -1,12 +1,5 @@
 <template>
   <section class="login-container">
-    <div class="max-width home-header">
-      <h1 class="logo-box">
-        <img src="../assets/home/logo.png" class="logo" />
-      </h1>
-      <span class="header-ani"></span>
-    </div>
-
     <div class="max-width m-auto login-main">
       <div class="login-center">
         <ul class="tab-box">
@@ -94,43 +87,6 @@ const submitLogin = () => {
 }
 
 
-
-.home-header {
-  flex-shrink: 0;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  height: 83px;
-  background: url('../assets/home/header-bg.png') no-repeat center;
-  background-size: auto 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-
-  .logo {
-    height: 44px;
-  }
-
-  .header-ani {
-    position: absolute;
-    left: -300px;
-    bottom: 0;
-    z-index: 1;
-    width: 300px;
-    height: 2px;
-    background: url('../assets/home/header-ani.png') no-repeat center;
-    background-size: 100%;
-    animation: headerAni 4s infinite;
-  }
-}
-
-@keyframes headerAni {
-  from { left: -300px; }
-  to { left: 110%; }
-}
-
-
 .login-main {
   width: 100%;
   flex: 1;
@@ -143,11 +99,11 @@ const submitLogin = () => {
 }
 
 .login-center {
-  width: 644px;
-  height: 540px;
+  width: 644rem;
+  height: 540rem;
   background: url('../assets/login/center-bg.png') no-repeat center;
   background-size: 100%;
-  padding: 50px 70px;
+  padding: 50rem 70rem;
   display: flex;
   flex-direction: column;
 }
@@ -155,15 +111,15 @@ const submitLogin = () => {
 .tab-box {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 40rem;
 
   li {
     position: relative;
     font-family: 'tx-Medium';
-    font-size: 32px;
+    font-size: 32rem;
     color: #FFFFFF;
-    line-height: 40px;
-    padding: 0 44px 12px;
+    line-height: 40rem;
+    padding: 0 44rem 12rem;
     cursor: pointer;
     opacity: .5;
   }
@@ -178,9 +134,9 @@ const submitLogin = () => {
       position: absolute;
       bottom: 0;
       left: 50%;
-      margin-left: -14px;
-      width: 27px;
-      height: 6px;
+      margin-left: -14rem;
+      width: 27rem;
+      height: 6rem;
       background: linear-gradient( 180deg, #69B7F3 0%, #3880E3 100%);
       transform: skew(-45deg);
     }
@@ -192,23 +148,27 @@ const submitLogin = () => {
 }
 .input-box {
   width: 100%;
-  height: 73px;
+  height: 73rem;
   background-color: #fff;
-  margin-bottom: 16px;
+  margin-bottom: 16rem;
 
   .input {
     width: 100%;
     height: 100%;
-    font-size: 24px;
-    padding: 0 32px;
+    font-size: 24rem;
+    padding: 0 32rem;
   }
 }
 .login-btn {
-  width: 233px;
-  height: 67px;
+  width: 233rem;
+  height: 67rem;
   background: url('../assets/login/login-btn.png') no-repeat center;
   background-size: 100%;
   margin: 0 auto;
   cursor: pointer;
 }
+</style>
+
+<style>
+body { background: #020441; }
 </style>
