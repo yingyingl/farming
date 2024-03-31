@@ -43,6 +43,26 @@ const routes = [
         path: 'list',
         name: 'list',
         component: () => import(/* webpackChunkName: "docs-index" */ '@/views/list.vue')
+      },
+      {
+        path: 'technological',
+        name: 'technological',
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/technological.vue')
+      },
+      {
+        path: 'variety',
+        name: 'variety',
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/variety.vue')
+      },
+      {
+        path: 'promotion',
+        name: 'promotion',
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/promotion.vue')
+      },
+      {
+        path: 'promotion/:id',
+        name: 'promotionDetail',
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/promotion_detail.vue')
       }
     ]
   }

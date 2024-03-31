@@ -60,9 +60,7 @@ const hoverMenu = (type) => {
  * @desc 跳转
 */
 const goNextPage = (type) => {
-  $router.push({
-    path: '/manage?type=' + type
-  })
+  $router.push('/manage?sort=' + type)
 }
 
 </script>

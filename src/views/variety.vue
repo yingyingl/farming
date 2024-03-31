@@ -1,49 +1,17 @@
 <template>
   <section class="expert-container">
     <div class="max-width m-auto w-p-100">
-      <div class="center-bread">育种体系繁育基地数据库</div>
+      <div class="center-bread">育种体系繁育基地品种数据库</div>
     </div>
 
     <div class="max-width m-auto home-main">
       <img src="../assets/home/center-left.png" class="arrow-img arrow-left" />
 
       <div class="center-main">
-        <ul class="tab-box">
-          <li 
-            v-for="item in tabList" 
-            :key="item.id" 
-            :class="{active: item.id === nowTab}" 
-            @click="tabHandle(item.id)"
-          >{{ item.name }}</li>
-        </ul>
         <el-table :data="tableData" class="table">
-          <el-table-column label="基地名称" prop="name"  min-width="100"></el-table-column>
-          <el-table-column label="地力" min-width="150">
-            <template #default="{ row }">
-              <div class="dot-box">
-                <template v-for="(diliItem, index) in row.dili" :key="index">
-                  <span class="dili" :class="'dili' + index">
-                    <i class="dot" :class="'dot' + index"></i>
-                    {{ diliItem }}
-                  </span>
-                </template>
-              </div>
-            </template>
-          </el-table-column>
-          <el-table-column label="盐分分布" prop="yj_area"  min-width="100"></el-table-column>
-          <el-table-column label="气象数据" min-width="180">
-            <template #default="{ row }">
-              <div class="dot-box">
-                <template v-for="(diliItem, index) in row.qx_data" :key="index">
-                  <span class="dili" :class="'dili' + index">
-                    <i class="dot" :class="'dot' + index"></i>
-                    {{ diliItem }}
-                  </span>
-                </template>
-              </div>
-            </template>
-          </el-table-column>
-          <el-table-column label="日期时间" prop="date" width="200"></el-table-column>
+          <el-table-column label="品种名称" prop="name"></el-table-column>
+          <el-table-column label="所属行业" prop="company"></el-table-column>
+          <el-table-column label="应用前景" prop="intro2"></el-table-column>
         </el-table>
       </div>
 
@@ -74,23 +42,11 @@ import { useRoute, useRouter } from 'vue-router'
 const tabList = [
   {
     id: 1,
-    name: '前营种植基地'
+    name: '品种库'
   },
   {
     id: 2,
-    name: '西花园种植基地'
-  },
-  {
-    id: 3,
-    name: '西砖河种植基地'
-  },
-  {
-    id: 4,
-    name: '青县四分场种植基地'
-  },
-  {
-    id: 5,
-    name: '中捷三分场种植基地'
+    name: '技术库'
   }
 ]
 const nowTab = ref(1)
@@ -103,11 +59,12 @@ const tabHandle = (type) => {
   for (var i = 0; i < 20; i++) {
     tableData.value.push({
       id: i,
-      name: `基地名称-${type}-${i + 1}`,
-      dili: [`盐分 05${type}`, '温度 32℃', '湿度 65%'],
-      yj_area: `盐分分布字段信息-${type}`,
-      qx_data: ['风力 056', '风向 西南', '温度 32℃', '湿度 65%'],
-      date: '2024年03月30日 15:46'
+      name: `品种名称-${type}-${i + 1}`,
+      varity: `品种-${type}${i + 1}`,
+      tech: `技术-${type}${i + 1}`,
+      company: `${type}农业-${i + 1}`,
+      intro1: `${type}技术成果介绍-${i + 1}`,
+      intro2: `${type}应用前景-${i + 1}`
     })
   }
 }
@@ -115,11 +72,12 @@ const tabHandle = (type) => {
 for (var i = 0; i < 20; i++) {
   tableData.value.push({
     id: i,
-    name: `基地名称-1-${i + 1}`,
-    dili: ['盐分 056', '温度 32℃', '湿度 65%'],
-    yj_area: '盐分分布字段信息',
-    qx_data: ['风力 056', '风向 西南', '温度 32℃', '湿度 65%'],
-    date: '2024年03月30日 15:46'
+    name: `品种名称-1-${i + 1}`,
+    varity: `品种-1${i + 1}`,
+    tech: `技术-1${i + 1}`,
+    company: `1农业-${i + 1}`,
+    intro1: `1技术成果介绍-${i + 1}`,
+    intro2: `1应用前景-${i + 1}`
   })
 }
 
@@ -180,6 +138,8 @@ const getList = () => {}
 
 :deep(.el-table) {
   .el-table__header-wrapper {
+    border: 2rem solid;
+    border-image: linear-gradient(to top, rgba(157, 197, 254, 1), rgba(157, 198, 255, 0)) 2 2;
     background-color: rgba(76, 130, 208, .3);
   }
   thead,  thead tr {

@@ -54,6 +54,8 @@ import { useRoute, useRouter } from 'vue-router'
 
 const $route = useRoute()
 const $router = useRouter()
+const sort = $route.query.sort
+
 let monitorUrl = 'http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_pxXkVHIkYd'
  
 if ($route.query.type == 3) {
@@ -63,21 +65,19 @@ if ($route.query.type == 4) {
   monitorUrl = 'http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_hSy2Yq2Wcv'
 }
 
-
-
 const goNextPage = (type) => {
   let url = ''
-  if (type === 1) {
-    url = 'meeting'
-  } else if (type === 7) {
-    url = '/expert'
-  } else {
-    url = '/list'
+  let arr = {
+    1: '/meeting',
+    2: '/list',
+    3: '/variety',
+    4: '/promotion',
+    6: 'technological',
+    7: '/expert'
   }
+  url = arr[type]
 
-  $router.push({
-    path: `${url}?type=${type}`
-  })
+  $router.push(`${url}?sort=${sort}`)
 }
 
 </script>
