@@ -5,42 +5,32 @@
 
       <div class="center-main">
         <ul class="center-list list-left">
-          <li class="_item1">
-            <a :href="monitorUrl" target="_blank">
-              <h2 class="_name">标准化育种全流程监控</h2>
-              <h3 class="_desc">Full process monitoring of standardized breeding</h3>
-            </a>
-          </li>
-          <li class="_item2" @click="goNextPage(1)">
-            <h2 class="_name">云会商中心</h2>
-            <h3 class="_desc">Cloud Consultation Center</h3>
-          </li>
-          <li class="_item3" @click="goNextPage(2)">
-            <h2 class="_name">育种体系繁育基地数据库</h2>
-            <h3 class="_desc">Breeding system breeding base database</h3>
-          </li>
-          <li class="_item4" @click="goNextPage(3)">
-            <h2 class="_name">品种数据库</h2>
-            <h3 class="_desc">Variety database</h3>
-          </li>
+          <template v-for="(item, index) in listLeft">
+            <li :class="`_item${index + 1}`" v-if="item.link == 1">
+              <a :href="item.url" target="_blank">
+                <h2 class="_name">{{ item.name }}</h2>
+                <h3 class="_desc">{{ item.enName }}</h3>
+              </a>
+            </li>
+            <li :class="`_item${index + 1}`" v-else  @click="goNextPage(item)">
+              <h2 class="_name">{{ item.name }}</h2>
+              <h3 class="_desc">{{ item.enName }}</h3>
+            </li>
+          </template>
         </ul>
         <ul class="center-list list-right">
-          <li class="_item5" @click="goNextPage(4)">
-            <h2 class="_name">信息动态</h2>
-            <h3 class="_desc">Information dynamics</h3>
-          </li>
-          <li class="_item6" @click="goNextPage(5)">
-            <h2 class="_name">需求响应库</h2>
-            <h3 class="_desc">Requirement Response Library</h3>
-          </li>
-          <li class="_item7" @click="goNextPage(6)">
-            <h2 class="_name">科技成果库</h2>
-            <h3 class="_desc">Science Technology Achievement Library</h3>
-          </li>
-          <li class="_item8" @click="goNextPage(7)">
-            <h2 class="_name">专家智库</h2>
-            <h3 class="_desc">Expert think tank</h3>
-          </li>
+          <template v-for="(item, index) in listRight">
+            <li :class="`_item${index + 5}`" v-if="item.link == 1">
+              <a :href="item.url" target="_blank">
+                <h2 class="_name">{{ item.name }}</h2>
+                <h3 class="_desc">{{ item.enName }}</h3>
+              </a>
+            </li>
+            <li :class="`_item${index + 5}`" v-else  @click="goNextPage(item)">
+              <h2 class="_name">{{ item.name }}</h2>
+              <h3 class="_desc">{{ item.enName }}</h3>
+            </li>
+          </template>
         </ul>
       </div>
 
@@ -55,29 +45,270 @@ import { useRoute, useRouter } from 'vue-router'
 const $route = useRoute()
 const $router = useRouter()
 const sort = $route.query.sort
+const listLeft = ref([])
+const listRight = ref([])
 
-let monitorUrl = 'http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_pxXkVHIkYd'
- 
-if ($route.query.type == 3) {
-  monitorUrl = 'http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_4DrCdi0bxm'
+// 联合创新中心
+if (sort == 1) {
+  listLeft.value = [
+    {
+      id: 1,
+      name: '标准化育种全流程监控',
+      enName: 'Full process monitoring of standardized breeding',
+      url: 'http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_pxXkVHIkYd',
+      link: 1
+    },
+    {
+      id: 2,
+      name: '云会商中心',
+      enName: 'Cloud Consultation Center',
+      url: '/meeting',
+      link: 0
+    },
+    {
+      id: 3,
+      name: '育种体系繁育基地数据库',
+      enName: 'Breeding system breeding base database',
+      url: '/list',
+      link: 0
+    },
+    {
+      id: 4,
+      name: '品种数据库',
+      enName: 'Variety database',
+      url: '/variety',
+      link: 0
+    }
+  ]
+  listRight.value = [
+    {
+      id: 5,
+      name: '信息动态',
+      enName: 'Information dynamics',
+      url: '/promotion',
+      link: 0
+    },
+    {
+      id: 6,
+      name: '需求响应库',
+      enName: 'Requirement Response Library',
+      url: '/expert',
+      link: 0
+    },
+    {
+      id: 7,
+      name: '科技成果库',
+      enName: 'Science Technology Achievement Library',
+      url: '/technological',
+      link: 0
+    },
+    {
+      id: 8,
+      name: '专家智库',
+      enName: 'Expert think tank',
+      url: '/expert',
+      link: 0
+    }
+  ]
 }
-if ($route.query.type == 4) {
-  monitorUrl = 'http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_hSy2Yq2Wcv'
+
+// 2、旱碱麦推广中心管理系统
+if (sort == 2) {
+  listLeft.value = [
+    {
+      id: 1,
+      name: '标准化育种全流程监控',
+      enName: 'Full process monitoring of standardized breeding',
+      url: 'http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_4DrCdi0bxm',
+      link: 1
+    },
+    {
+      id: 2,
+      name: '云会商中心',
+      enName: 'Cloud Consultation Center',
+      url: '/meeting',
+      link: 0
+    },
+    {
+      id: 3,
+      name: '育种体系繁育基地数据库',
+      enName: 'Breeding system breeding base database',
+      url: '/list',
+      link: 0
+    },
+    {
+      id: 4,
+      name: '品种数据库',
+      enName: 'Variety database',
+      url: '/variety',
+      link: 0
+    }
+  ]
+  listRight.value = [
+    {
+      id: 5,
+      name: '信息动态',
+      enName: 'Information dynamics',
+      url: '/promotion',
+      link: 0
+    },
+    {
+      id: 6,
+      name: '需求响应库',
+      enName: 'Requirement Response Library',
+      url: '/expert',
+      link: 0
+    },
+    {
+      id: 7,
+      name: '科技成果库',
+      enName: 'Science Technology Achievement Library',
+      url: '/technological',
+      link: 0
+    },
+    {
+      id: 8,
+      name: '专家智库',
+      enName: 'Expert think tank',
+      url: '/expert',
+      link: 0
+    }
+  ]
 }
 
-const goNextPage = (type) => {
-  let url = ''
-  let arr = {
-    1: '/meeting',
-    2: '/list',
-    3: '/variety',
-    4: '/promotion',
-    6: 'technological',
-    7: '/expert'
-  }
-  url = arr[type]
 
-  $router.push(`${url}?sort=${sort}`)
+// 联合种植中心
+if (sort == 3) {
+  listLeft.value = [
+    {
+      id: 1,
+      name: '旱碱麦种植管理调度数据库',
+      enName: 'Full process monitoring of standardized breeding',
+      url: '/dispatch',
+      link: 0
+    },
+    {
+      id: 2,
+      name: '云会商中心',
+      enName: 'Cloud Consultation Center',
+      url: '/meeting',
+      link: 0
+    },
+    {
+      id: 3,
+      name: '旱碱麦高产示范数据库管理平台',
+      enName: 'Breeding system breeding base database',
+      url: '/demonstration',
+      link: 0
+    },
+    {
+      id: 4,
+      name: '品种数据库',
+      enName: 'Variety database',
+      url: '/variety',
+      link: 0
+    }
+  ]
+  listRight.value = [
+    {
+      id: 5,
+      name: '信息动态',
+      enName: 'Information dynamics',
+      url: '/promotion',
+      link: 0
+    },
+    {
+      id: 6,
+      name: '需求响应库',
+      enName: 'Requirement Response Library',
+      url: '/expert',
+      link: 0
+    },
+    {
+      id: 7,
+      name: '科技成果库',
+      enName: 'Science Technology Achievement Library',
+      url: '/technological',
+      link: 0
+    },
+    {
+      id: 8,
+      name: '专家智库',
+      enName: 'Expert think tank',
+      url: '/expert',
+      link: 0
+    }
+  ]
+}
+
+// 2、旱碱麦推广中心管理系统
+if (sort == 4) {
+  listLeft.value = [
+    {
+      id: 1,
+      name: '标准化育种全流程监控',
+      enName: 'Full process monitoring of standardized breeding',
+      url: 'http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_hSy2Yq2Wcv',
+      link: 1
+    },
+    {
+      id: 2,
+      name: '云会商中心',
+      enName: 'Cloud Consultation Center',
+      url: '/meeting',
+      link: 0
+    },
+    {
+      id: 3,
+      name: '育种体系繁育基地数据库',
+      enName: 'Breeding system breeding base database',
+      url: '/list',
+      link: 0
+    },
+    {
+      id: 4,
+      name: '品种数据库',
+      enName: 'Variety database',
+      url: '/variety',
+      link: 0
+    }
+  ]
+  listRight.value = [
+    {
+      id: 5,
+      name: '信息动态',
+      enName: 'Information dynamics',
+      url: '/promotion',
+      link: 0
+    },
+    {
+      id: 6,
+      name: '需求响应库',
+      enName: 'Requirement Response Library',
+      url: '/expert',
+      link: 0
+    },
+    {
+      id: 7,
+      name: '科技成果库',
+      enName: 'Science Technology Achievement Library',
+      url: '/technological',
+      link: 0
+    },
+    {
+      id: 8,
+      name: '专家智库',
+      enName: 'Expert think tank',
+      url: '/expert',
+      link: 0
+    }
+  ]
+}
+
+
+
+const goNextPage = (item) => {
+  $router.push(`${item.url}?sort=${sort}`)
 }
 
 </script>

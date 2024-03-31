@@ -63,7 +63,17 @@ const routes = [
         path: 'promotion/:id',
         name: 'promotionDetail',
         component: () => import(/* webpackChunkName: "docs-index" */ '@/views/promotion_detail.vue')
-      }
+      },
+      {
+        path: 'dispatch',
+        name: 'dispatch',
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/dispatch.vue')
+      },
+      {
+        path: 'demonstration',
+        name: 'demonstration',
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/demonstration.vue')
+      },
     ]
   }
 ]
