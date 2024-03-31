@@ -65,6 +65,11 @@ const routes = [
         component: () => import(/* webpackChunkName: "docs-index" */ '@/views/information.vue')
       },
       {
+        path: 'demand',
+        name: 'demand',
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/demand.vue')
+      },
+      {
         path: 'promotion/:id',
         name: 'promotionDetail',
         component: () => import(/* webpackChunkName: "docs-index" */ '@/views/promotion_detail.vue')
@@ -79,6 +84,16 @@ const routes = [
         name: 'demonstration',
         component: () => import(/* webpackChunkName: "docs-index" */ '@/views/demonstration.vue')
       },
+      {
+        path: 'enterprise',
+        name: 'enterprise',
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/enterprise.vue')
+      },
+      {
+        path: 'demandsearch',
+        name: 'demandsearch',
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/demandsearch.vue')
+      }
     ]
   }
 ]

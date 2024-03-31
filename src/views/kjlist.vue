@@ -1,7 +1,7 @@
 <template>
   <section class="expert-container">
     <div class="max-width m-auto w-p-100">
-      <div class="center-bread">育种体系繁育基地数据库</div>
+      <div class="center-bread">科技成果库</div>
     </div>
 
     <div class="max-width m-auto home-main">
@@ -16,35 +16,24 @@
             @click="tabHandle(item.id)"
           >{{ item.name }}</li>
         </ul>
-        <el-table :data="tableData" class="table">
-          <el-table-column label="基地名称" prop="name"  min-width="100"></el-table-column>
-          <el-table-column label="地力" min-width="150">
-            <template #default="{ row }">
-              <div class="dot-box">
-                <template v-for="(diliItem, index) in row.dili" :key="index">
-                  <span class="dili" :class="'dili' + index">
-                    <i class="dot" :class="'dot' + index"></i>
-                    {{ diliItem }}
-                  </span>
-                </template>
-              </div>
-            </template>
-          </el-table-column>
-          <el-table-column label="盐分分布" prop="yj_area"  min-width="100"></el-table-column>
-          <el-table-column label="气象数据" min-width="180">
-            <template #default="{ row }">
-              <div class="dot-box">
-                <template v-for="(diliItem, index) in row.qx_data" :key="index">
-                  <span class="dili" :class="'dili' + index">
-                    <i class="dot" :class="'dot' + index"></i>
-                    {{ diliItem }}
-                  </span>
-                </template>
-              </div>
-            </template>
-          </el-table-column>
-          <el-table-column label="日期时间" prop="date" width="200"></el-table-column>
+        <el-table :data="tableData" class="table" v-show="nowTab ==1">
+          <el-table-column label="名称"  prop="mc"  min-width="100"></el-table-column>
+          <el-table-column label="品种"  prop="pz" min-width="100"></el-table-column>
+          <el-table-column label="技术" prop="js"  min-width="100"></el-table-column>
+          <el-table-column label="所属行业"  prop="sshy"  min-width="100"></el-table-column>
+          <el-table-column label="技术成果介绍"   prop="jscg" min-width="180"></el-table-column>
+          <el-table-column label="应用前景"   prop="yyqj" width="200"></el-table-column>
         </el-table>
+
+        <el-table :data="tableData" class="table" v-show="nowTab ==2">
+          <el-table-column label="名称"  prop="mc"  min-width="100"></el-table-column>
+          <el-table-column label="品种"  prop="pz" min-width="100"></el-table-column>
+          <el-table-column label="技术" prop="js"  min-width="100"></el-table-column>
+          <el-table-column label="所属行业"  prop="sshy"  min-width="100"></el-table-column>
+          <el-table-column label="技术成果介绍"   prop="jscg" min-width="180"></el-table-column>
+          <el-table-column label="应用前景"   prop="yyqj" width="200"></el-table-column>
+        </el-table>
+
       </div>
 
       <img src="../assets/home/center-right.png" class="arrow-img arrow-right" />
@@ -74,52 +63,38 @@ import { useRoute, useRouter } from 'vue-router'
 const tabList = [
   {
     id: 1,
-    name: '前营种植基地'
+    name: '品种库'
   },
   {
     id: 2,
-    name: '西花园种植基地'
-  },
-  {
-    id: 3,
-    name: '西砖河种植基地'
-  },
-  {
-    id: 4,
-    name: '青县四分场种植基地'
-  },
-  {
-    id: 5,
-    name: '中捷三分场种植基地'
+    name: '技术库'
   }
 ]
 const nowTab = ref(1)
-const tableData = ref([])
-
 const tabHandle = (type) => {
   nowTab.value = type
-
-  tableData.value = []
-  for (var i = 0; i < 20; i++) {
-    tableData.value.push({
-      id: i,
-      name: `基地名称-${type}-${i + 1}`,
-      dili: [`盐分 05${type}`, '温度 32℃', '湿度 65%'],
-      yj_area: `盐分分布字段信息-${type}`,
-      qx_data: ['风力 056', '风向 西南', '温度 32℃', '湿度 65%'],
-      date: '2024年03月30日 15:46'
-    })
-  }
 }
+// 名称、品种、技术、所属行业、技术成果介绍、应用前景
+const tableData = [{
+  id: '1',
+  mc: '懒汉麦',
+  pz: '衡麦30',
+  js: '旱碱麦',
+  sshy:'小麦种植',
+  jscg: '亩产千斤',
+  yyqj: '旱作雨养盐碱地高产示范田'
 
+}]
 for (var i = 0; i < 20; i++) {
-  tableData.value.push({
-    id: i,
-    name: `基地名称-1-${i + 1}`,
-    dili: ['盐分 056', '温度 32℃', '湿度 65%'],
-    yj_area: '盐分分布字段信息',
-    qx_data: ['风力 056', '风向 西南', '温度 32℃', '湿度 65%'],
-    date: '2024年03月30日 15:46'
+  tableData.push({
+    id: '1',
+    mc: '懒汉麦',
+    pz: '衡麦30',
+    js: '旱碱麦',
+    sshy:'小麦种植',
+    jscg: '亩产千斤',
+    yyqj: '旱作雨养盐碱地高产示范田'
+
   })
 }
 

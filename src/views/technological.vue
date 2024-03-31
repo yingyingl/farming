@@ -1,7 +1,7 @@
 <template>
   <section class="expert-container">
     <div class="max-width m-auto w-p-100">
-      <div class="center-bread">育种体系繁育基地科技成果库</div>
+      <div class="center-bread">科技成果库</div>
     </div>
 
     <div class="max-width m-auto home-main">

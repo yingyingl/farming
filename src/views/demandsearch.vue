@@ -1,22 +1,22 @@
 <template>
   <section class="expert-container">
     <div class="max-width m-auto w-p-100">
-      <div class="center-bread">专家智库</div>
+      <div class="center-bread">需求检索</div>
     </div>
 
     <div class="max-width m-auto home-main">
       <img src="../assets/home/center-left.png" class="arrow-img arrow-left" />
 
       <div class="center-main">
-        <div class="epxert-item" v-for="item in 10" :key="item">
+        <div class="epxert-item" v-for="item in 10" :key="item" @click="goNextLink(1)">
           <div class="img-box">
-            <img src="https://img.mp.sohu.com/upload/20170804/68f85952c3dc4beaaf45473155fb4917_th.png" class="_img" />
+            <img src="https://p1-q.mafengwo.net/s9/M00/DF/E4/wKgBs1gDDt6AKrTbABPsiRWqoFw41.jpeg" class="_img" />
           </div>
 
           <div class="content-box">
-            <h2 class="_name">医生姓名</h2>
-            <p class="_desc">擅长小麦生长环境，生长问题，疾病的预防以及治疗。擅长小麦生长环境，生长问题，疾病的预防以及治疗擅长小麦生长环境，生长问题，疾病的预防以及治疗。擅长小麦生长环境，生长问题，疾病的预防以及治疗。</p>
-            <img src="../assets/expert/btn-zx.png" class="_btn" />
+            <h2 class="_name">打败 Midjourney，这个 Google 大牛推出的 AI 产品凭什么弯道超车</h2>
+            <p class="_desc">在这片群雄割据的红海，头部被 Midjourney、DALL·E、Stable Diffusion 等占据，其余还能让人眼前一亮的产品并不多…</p>
+            <img src="../assets/artical/view-btn.png" class="_btn" />
           </div>
         </div>
       </div>
@@ -31,7 +31,9 @@ import { useRoute, useRouter } from 'vue-router'
 
 const $router = useRouter()
 
-
+const goNextLink = (type) => {
+  $router.push(`/promotion/${type}`)
+}
 
 </script>
 

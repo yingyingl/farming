@@ -1,7 +1,7 @@
 <template>
   <section class="expert-container">
     <div class="max-width m-auto w-p-100">
-      <div class="center-bread">旱碱麦种植管理调度数据库</div>
+      <div class="center-bread">旱碱麦高产示范数据库管理平台</div>
     </div>
 
     <div class="max-width m-auto home-main">
@@ -9,14 +9,13 @@
 
       <div class="center-main">
         <el-table :data="tableData" class="table">
-          地块编号、面积、品种、产量、技术应用、技术团队、实施情况
           <el-table-column label="地块编号" prop="id"></el-table-column>
           <el-table-column label="面积" prop="area"></el-table-column>
           <el-table-column label="品种" prop="variety"></el-table-column>
           <el-table-column label="产量" prop="areah"></el-table-column>
           <el-table-column label="技术应用" prop="apply"></el-table-column>
-          <el-table-column label="技术团队" prop="apply"></el-table-column>
-          <el-table-column label="实施情况" prop="apply"></el-table-column>
+          <el-table-column label="技术团队" prop="apply2"></el-table-column>
+          <el-table-column label="实施情况" prop="apply3"></el-table-column>
         </el-table>
       </div>
 
@@ -51,7 +50,9 @@ for (var i = 0; i < 20; i++) {
     area: (1000 * i) + '亩',
     areah: (200 * i) + '亩',
     variety: i * 5,
-    apply: '已应用'
+    apply: '已应用',
+    apply2: 'A实验室',
+    apply3: '实施良好'
   })
 }
 

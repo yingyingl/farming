@@ -92,7 +92,7 @@ if (sort == 1) {
       id: 6,
       name: '需求响应库',
       enName: 'Requirement Response Library',
-      url: '/expert',
+      url: '/demand',
       link: 0
     },
     {
@@ -115,12 +115,19 @@ if (sort == 1) {
 // 2、旱碱麦推广中心管理系统
 if (sort == 2) {
   listLeft.value = [
+    // {
+    //   id: 1,
+    //   name: '标准化育种全流程监控',
+    //   enName: 'Full process monitoring of standardized breeding',
+    //   url: 'http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_4DrCdi0bxm',
+    //   link: 1
+    // },
     {
       id: 1,
-      name: '标准化育种全流程监控',
-      enName: 'Full process monitoring of standardized breeding',
-      url: 'http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_4DrCdi0bxm',
-      link: 1
+      name: '专家智库',
+      enName: 'Expert think tank',
+      url: '/expert',
+      link: 0
     },
     {
       id: 2,
@@ -136,13 +143,13 @@ if (sort == 2) {
       url: '/promotion',
       link: 0
     },
-    {
-      id: 4,
-      name: '品种数据库',
-      enName: 'Variety database',
-      url: '/variety',
-      link: 0
-    }
+    // {
+    //   id: 4,
+    //   name: '品种数据库',
+    //   enName: 'Variety database',
+    //   url: '/variety',
+    //   link: 0
+    // }
   ]
   listRight.value = [
     {
@@ -156,7 +163,7 @@ if (sort == 2) {
       id: 6,
       name: '需求响应库',
       enName: 'Requirement Response Library',
-      url: '/expert',
+      url: '/demand',
       link: 0
     },
     {
@@ -165,14 +172,8 @@ if (sort == 2) {
       enName: 'Science Technology Achievement Library',
       url: '/technological',
       link: 0
-    },
-    {
-      id: 8,
-      name: '专家智库',
-      enName: 'Expert think tank',
-      url: '/expert',
-      link: 0
     }
+
   ]
 }
 
@@ -182,10 +183,10 @@ if (sort == 3) {
   listLeft.value = [
     {
       id: 1,
-      name: '旱碱麦种植管理调度数据库',
-      enName: 'Full process monitoring of standardized breeding',
-      url: '/dispatch',
-      link: 0
+      name: '标准化种植全流程监控',
+      enName: 'Full process monitoring of wheatPlanting breeding',
+      url: 'http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_4DrCdi0bxm',
+      link: 1
     },
     {
       id: 2,
@@ -203,9 +204,9 @@ if (sort == 3) {
     },
     {
       id: 4,
-      name: '品种数据库',
-      enName: 'Variety database',
-      url: '/variety',
+      name: '旱碱麦种植管理调度数据库',
+      enName: 'WheatPlanting database',
+      url: '/dispatch',
       link: 0
     }
   ]
@@ -221,7 +222,7 @@ if (sort == 3) {
       id: 6,
       name: '需求响应库',
       enName: 'Requirement Response Library',
-      url: '/expert',
+      url: '/demand',
       link: 0
     },
     {
@@ -246,8 +247,8 @@ if (sort == 4) {
   listLeft.value = [
     {
       id: 1,
-      name: '标准化育种全流程监控',
-      enName: 'Full process monitoring of standardized breeding',
+      name: '标准化车间全流程监控',
+      enName: 'Full process monitoring of standardized workshops',
       url: 'http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_hSy2Yq2Wcv',
       link: 1
     },
@@ -260,16 +261,16 @@ if (sort == 4) {
     },
     {
       id: 3,
-      name: '育种体系繁育基地数据库',
-      enName: 'Breeding system breeding base database',
-      url: '/list',
+      name: '企业数据库',
+      enName: 'Enterprise database',
+      url: '/enterprise',
       link: 0
     },
     {
       id: 4,
-      name: '品种数据库',
-      enName: 'Variety database',
-      url: '/variety',
+      name: '需求检索',
+      enName: 'Requirement search',
+      url: '/demandsearch',
       link: 0
     }
   ]
@@ -285,7 +286,7 @@ if (sort == 4) {
       id: 6,
       name: '需求响应库',
       enName: 'Requirement Response Library',
-      url: '/expert',
+      url: '/demand',
       link: 0
     },
     {
