@@ -11,7 +11,7 @@
         <div class="list-box">
           <div class="epxert-item">
             <div class="img-box">
-              <img src="../assets/expert/郭进考.png" class="_img" />
+              <img src="../assets/expert/guojinkao.png" class="_img" />
             </div>
 
             <div class="content-box">
@@ -23,7 +23,7 @@
 
           <div class="epxert-item">
             <div class="img-box">
-              <img src="../assets/expert/李振声.png" class="_img" />
+              <img src="../assets/expert/lizhensheng.png" class="_img" />
             </div>
 
             <div class="content-box">
@@ -35,7 +35,7 @@
 
           <div class="epxert-item">
             <div class="img-box">
-              <img src="../assets/expert/马永安.png" class="_img" />
+              <img src="../assets/expert/mayongan.png" class="_img" />
             </div>
 
             <div class="content-box">
@@ -47,7 +47,7 @@
 
           <div class="epxert-item">
             <div class="img-box">
-              <img src="../assets/expert/茹振钢.png" class="_img" />
+              <img src="../assets/expert/ruzhengang.png" class="_img" />
             </div>
 
             <div class="content-box">
@@ -59,7 +59,7 @@
 
           <div class="epxert-item">
             <div class="img-box">
-              <img src="../assets/expert/许为钢.png" class="_img" />
+              <img src="../assets/expert/xuweigang.png" class="_img" />
             </div>
 
             <div class="content-box">
@@ -71,7 +71,7 @@
 
           <div class="epxert-item">
             <div class="img-box">
-              <img src="../assets/expert/赵振东.png" class="_img" />
+              <img src="../assets/expert/zhaozhendong.png" class="_img" />
             </div>
 
             <div class="content-box">
