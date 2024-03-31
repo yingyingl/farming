@@ -61,6 +61,8 @@ router.beforeEach(async (to, from, next) => {
 
   if (whiteList.indexOf(to.path) === -1 && to.path !== '/login' && !token) {
     next(`/login?redirect=${to.path}`)
+  } else if (token && to.path === '/login') {
+    next('/index')
   } else {
     next()
   }
