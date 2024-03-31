@@ -85,7 +85,7 @@ if (sort == 1) {
       id: 5,
       name: '信息动态',
       enName: 'Information dynamics',
-      url: '/promotion',
+      url: '/information',
       link: 0
     },
     {
@@ -131,9 +131,9 @@ if (sort == 2) {
     },
     {
       id: 3,
-      name: '育种体系繁育基地数据库',
+      name: '旱碱麦推广中心在线学习中心',
       enName: 'Breeding system breeding base database',
-      url: '/list',
+      url: '/promotion',
       link: 0
     },
     {
@@ -149,7 +149,7 @@ if (sort == 2) {
       id: 5,
       name: '信息动态',
       enName: 'Information dynamics',
-      url: '/promotion',
+      url: '/information',
       link: 0
     },
     {
@@ -214,7 +214,7 @@ if (sort == 3) {
       id: 5,
       name: '信息动态',
       enName: 'Information dynamics',
-      url: '/promotion',
+      url: '/information',
       link: 0
     },
     {
@@ -241,7 +241,7 @@ if (sort == 3) {
   ]
 }
 
-// 2、旱碱麦推广中心管理系统
+// 
 if (sort == 4) {
   listLeft.value = [
     {
