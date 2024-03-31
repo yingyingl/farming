@@ -35,9 +35,9 @@ const routes = [
         component: () => import(/* webpackChunkName: "docs-index" */ '@/views/expert.vue')
       },
       {
-        path: 'metting',
-        name: 'metting',
-        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/metting.vue')
+        path: 'meeting',
+        name: 'meeting',
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/meeting.vue')
       },
       {
         path: 'list',

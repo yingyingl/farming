@@ -53,6 +53,34 @@
     <div class="max-width m-auto">
       <img src="../assets/metting/create-btn.png" class="create-btn"  />
     </div>
+
+
+    <!-- 预约会议 -->
+    <div class="meeting-form-modal" v-if="showModal">
+      <div class="_mask"></div>
+      <div class="_content">
+        <img src="../assets/metting/create-title.png" class="__tit"  />
+        <div class="flex1">
+          <div class="input-box">
+            <input type="text" />
+          </div>
+          <div class="input-box">
+            <input type="text" />
+          </div>
+          <div class="input-box">
+            <input type="text" />
+          </div>
+          <div class="input-box">
+            <input type="text" />
+          </div>
+          <div class="input-box">
+            <input type="text" />
+          </div>
+        </div>
+
+        <img src="../assets/metting/create-btn.png" class="m-auto create-btn"  />
+      </div>
+    </div>
   </section>
 </template>
 
@@ -92,6 +120,12 @@ const tableData = [{
   date: '2024年03月30日',
   time: '17:36— 18:36'
 }]
+
+
+const showModal = ref(false)
+const showModalHandle = (type) => {
+  showModal.value = type
+}
 </script>
 
 <style scoped lang="less">
@@ -214,6 +248,61 @@ const tableData = [{
   width: 233rem;
   height: 67rem;
   cursor: pointer;
+}
+
+/******/
+.meeting-form-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ._mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(13,27,49,0.8);
+    backdrop-filter: blur(3px);
+  }
+  ._content {
+    position: relative;
+    z-index: 1;
+    width: 644rem;
+    height: 740rem;
+    background: url('../assets/metting/yuyue-bg.png') no-repeat center;
+    background-size: 100% 100%;
+    padding: 60rem 72rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .__tit {
+    width: 125rem;
+    height: 31rem;
+    margin: 0 auto 50rem;
+  }
+
+  .input-box {
+    width: 100%;
+    height: 73rem;
+    background-color: #fff;
+    margin-bottom: 16rem;
+    clip-path: polygon(6% 0, 100% 0, 100% 70%, 94% 100%, 0 100%, 0 30%); /* 调整四个坐标点来设置缺角的形状 */
+
+    .input {
+      width: 100%;
+      height: 100%;
+      font-size: 24rem;
+      padding: 0 32rem;
+    }
+  }
 }
 
 @media screen and (max-width: 767rem) {

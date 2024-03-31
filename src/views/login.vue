@@ -151,6 +151,7 @@ const submitLogin = () => {
   height: 73rem;
   background-color: #fff;
   margin-bottom: 16rem;
+  clip-path: polygon(6% 0, 100% 0, 100% 70%, 94% 100%, 0 100%, 0 30%); /* 调整四个坐标点来设置缺角的形状 */
 
   .input {
     width: 100%;
