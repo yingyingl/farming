@@ -10,7 +10,14 @@
       </h1>
       <span class="header-ani"></span>
 
-      <span class="gologin" @click="gologin" v-if="$route.path !== '/login'">{{ userName || '登录' }}</span>
+      <template v-if="$route.path !== '/login'">
+        <span class="gologin" @click="gologin" v-if="!userName">登录</span>
+
+        <div class="gologin" v-else>
+          <img src="https://img.mp.sohu.com/upload/20170804/68f85952c3dc4beaaf45473155fb4917_th.png" class="_tx" />
+          {{ userName }}
+        </div>
+      </template>
     </div>
   </section>
 </template>
@@ -21,9 +28,10 @@ import { useRoute, useRouter } from 'vue-router'
 const $route = useRoute()
 const $router = useRouter()
 
-const userName = localStorage.getItem('adminToken')
+const userName = ref()
+userName.value = localStorage.getItem('adminToken')
 const gologin = () => {
-  if (userName) return
+  if (userName.value) return
 
   $router.push({
     path: '/login'
@@ -71,6 +79,15 @@ const showBack = computed(() => {
     font-size: 18rem;
     color: #fff;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    ._tx {
+      width: 32rem;
+      height: 32rem;
+      margin-right: 8rem;
+      border-radius: 50%;
+    }
   }
 }
 
