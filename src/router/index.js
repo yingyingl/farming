@@ -28,6 +28,11 @@ const routes = [
         path: 'manage',
         name: 'manage',
         component: () => import(/* webpackChunkName: "docs-index" */ '@/views/manage.vue')
+      },
+      {
+        path: 'expert',
+        name: 'expert',
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/expert.vue')
       }
     ]
   }
