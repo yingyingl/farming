@@ -38,6 +38,11 @@ const routes = [
         path: 'metting',
         name: 'metting',
         component: () => import(/* webpackChunkName: "docs-index" */ '@/views/metting.vue')
+      },
+      {
+        path: 'list',
+        name: 'list',
+        component: () => import(/* webpackChunkName: "docs-index" */ '@/views/list.vue')
       }
     ]
   }

@@ -120,8 +120,7 @@ const tableData = [{
   min-height: 0;
   padding: 0 8rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
   overflow-y: auto;
 }
 
@@ -134,11 +133,12 @@ const tableData = [{
   padding-left: 24rem;
   background: url('../assets/expert/title-icon.png') no-repeat left center;
   background-size: 12rem 24rem;
-  margin: 60rem 60rem 14rem;
+  margin: 60rem 60rem 30rem;
 }
 
 .table {
   background: none;
+  min-height: 0;
 }
 :deep(.el-table) {
   .el-table__header-wrapper {
