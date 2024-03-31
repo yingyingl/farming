@@ -6,6 +6,7 @@ const Components = require('unplugin-vue-components/webpack') // On-demand compo
 const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
 const Icons = require('unplugin-icons/webpack')
 const IconsResolver = require('unplugin-icons/resolver')
+// const HTMLWebpackPlugin = require('html-webpack-plugin')
 const path = require('path');
 
 module.exports = {
@@ -20,6 +21,7 @@ module.exports = {
         patterns: [path.resolve(__dirname, './src/global.less')]
     }
   },
+  
   devServer: {
     port: 9527,
     open: true,
@@ -37,6 +39,12 @@ module.exports = {
 
   configureWebpack: {
     plugins: [
+      /*
+      new HTMLWebpackPlugin({
+        title: '旱碱麦'
+      }),
+      */
+
       AutoImport({
         imports: [
           'vue',
