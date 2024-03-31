@@ -161,9 +161,9 @@ const showModalHandle = (type) => {
 .center-bread {
   position: relative;
   font-family: 'tx-Medium';
-  font-size: 32rpx;
+  font-size: 32rem;
   color: #FFFFFF;
-  line-height: 39rpx;
+  line-height: 39rem;
   padding-left: 24rem;
   background: url('../assets/expert/title-icon.png') no-repeat left center;
   background-size: 12rem 24rem;

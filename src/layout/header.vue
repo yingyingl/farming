@@ -6,7 +6,8 @@
       </div>
 
       <h1 class="logo-box">
-        <img src="../assets/home/logo.png" class="logo" />
+        <img src="../assets/logo.png" class="logo" />
+        <span class="title">{{ nowTitle }}</span>
       </h1>
       <span class="header-ani"></span>
 
@@ -27,6 +28,34 @@ import { useRoute, useRouter } from 'vue-router'
 
 const $route = useRoute()
 const $router = useRouter()
+
+const nowTitle = ref('旱碱麦特色产业基地智慧云平台')
+
+const titleHandle = () => {
+  const sort = $route.query.sort
+
+  if ($route.path === '/' || $route.path === '/index' || $route.path === '/login') {
+    nowTitle.value = '旱碱麦特色产业基地智慧云平台'
+  } else if (sort == 2) {
+    nowTitle.value = '旱碱麦推广中心管理系统'
+  } else if (sort == 3) {
+    nowTitle.value = '旱碱麦种植中心管理系统'
+  } else if (sort == 4) {
+    nowTitle.value = '旱碱麦加工体系联合创新中心管理系统'
+  } else {
+    nowTitle.value = '旱碱麦育种体系联合创新中心管理系统'
+  }
+}
+titleHandle()
+
+const changeUrl = computed(() => {
+  return $route.path || $route.query.sort
+})
+watch(changeUrl, () => {
+  titleHandle()
+})
+ 
+
 
 const userName = ref()
 userName.value = localStorage.getItem('adminToken')
@@ -58,8 +87,23 @@ const showBack = computed(() => {
   justify-content: center;
   overflow: hidden;
 
+  .logo-box {
+    display: flex;
+    align-items: center;
+  }
+
   .logo {
     height: 44rem;
+  }
+
+  .title {
+    font-size: 38rem;
+    font-family: 'tx-Medium';
+    margin-left: 8rem;
+    background: -webkit-linear-gradient(top, #F7FFFF 0%, #A0DEF6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 4rem 0px rgba(160,222,246,.2);
   }
 
   .header-ani {

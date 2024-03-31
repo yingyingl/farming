@@ -8,17 +8,80 @@
       <img src="../assets/home/center-left.png" class="arrow-img arrow-left" />
 
       <div class="center-main">
-        <div class="epxert-item" v-for="item in 10" :key="item">
-          <div class="img-box">
-            <img src="https://img.mp.sohu.com/upload/20170804/68f85952c3dc4beaaf45473155fb4917_th.png" class="_img" />
+        <div class="list-box">
+          <div class="epxert-item">
+            <div class="img-box">
+              <img src="../assets/expert/郭进考.png" class="_img" />
+            </div>
+
+            <div class="content-box">
+              <h2 class="_name">郭进考</h2>
+              <p class="_desc">擅长小麦生长环境，生长问题，疾病的预防以及治疗。擅长小麦生长环境，生长问题，疾病的预防以及治疗擅长小麦生长环境，生长问题，疾病的预防以及治疗。擅长小麦生长环境，生长问题，疾病的预防以及治疗。</p>
+              <img src="../assets/expert/btn-zx.png" class="_btn" />
+            </div>
           </div>
 
-          <div class="content-box">
-            <h2 class="_name">医生姓名</h2>
-            <p class="_desc">擅长小麦生长环境，生长问题，疾病的预防以及治疗。擅长小麦生长环境，生长问题，疾病的预防以及治疗擅长小麦生长环境，生长问题，疾病的预防以及治疗。擅长小麦生长环境，生长问题，疾病的预防以及治疗。</p>
-            <img src="../assets/expert/btn-zx.png" class="_btn" />
+          <div class="epxert-item">
+            <div class="img-box">
+              <img src="../assets/expert/李振声.png" class="_img" />
+            </div>
+
+            <div class="content-box">
+              <h2 class="_name">李振声</h2>
+              <p class="_desc">擅长小麦生长环境，生长问题，疾病的预防以及治疗。擅长小麦生长环境，生长问题，疾病的预防以及治疗擅长小麦生长环境，生长问题，疾病的预防以及治疗。擅长小麦生长环境，生长问题，疾病的预防以及治疗。</p>
+              <img src="../assets/expert/btn-zx.png" class="_btn" />
+            </div>
+          </div>
+
+          <div class="epxert-item">
+            <div class="img-box">
+              <img src="../assets/expert/马永安.png" class="_img" />
+            </div>
+
+            <div class="content-box">
+              <h2 class="_name">马永安</h2>
+              <p class="_desc">擅长小麦生长环境，生长问题，疾病的预防以及治疗。擅长小麦生长环境，生长问题，疾病的预防以及治疗擅长小麦生长环境，生长问题，疾病的预防以及治疗。擅长小麦生长环境，生长问题，疾病的预防以及治疗。</p>
+              <img src="../assets/expert/btn-zx.png" class="_btn" />
+            </div>
+          </div>
+
+          <div class="epxert-item">
+            <div class="img-box">
+              <img src="../assets/expert/茹振钢.png" class="_img" />
+            </div>
+
+            <div class="content-box">
+              <h2 class="_name">茹振钢</h2>
+              <p class="_desc">擅长小麦生长环境，生长问题，疾病的预防以及治疗。擅长小麦生长环境，生长问题，疾病的预防以及治疗擅长小麦生长环境，生长问题，疾病的预防以及治疗。擅长小麦生长环境，生长问题，疾病的预防以及治疗。</p>
+              <img src="../assets/expert/btn-zx.png" class="_btn" />
+            </div>
+          </div>
+
+          <div class="epxert-item">
+            <div class="img-box">
+              <img src="../assets/expert/许为钢.png" class="_img" />
+            </div>
+
+            <div class="content-box">
+              <h2 class="_name">许为钢</h2>
+              <p class="_desc">擅长小麦生长环境，生长问题，疾病的预防以及治疗。擅长小麦生长环境，生长问题，疾病的预防以及治疗擅长小麦生长环境，生长问题，疾病的预防以及治疗。擅长小麦生长环境，生长问题，疾病的预防以及治疗。</p>
+              <img src="../assets/expert/btn-zx.png" class="_btn" />
+            </div>
+          </div>
+
+          <div class="epxert-item">
+            <div class="img-box">
+              <img src="../assets/expert/赵振东.png" class="_img" />
+            </div>
+
+            <div class="content-box">
+              <h2 class="_name">赵振东</h2>
+              <p class="_desc">擅长小麦生长环境，生长问题，疾病的预防以及治疗。擅长小麦生长环境，生长问题，疾病的预防以及治疗擅长小麦生长环境，生长问题，疾病的预防以及治疗。擅长小麦生长环境，生长问题，疾病的预防以及治疗。</p>
+              <img src="../assets/expert/btn-zx.png" class="_btn" />
+            </div>
           </div>
         </div>
+
       </div>
 
       <img src="../assets/home/center-right.png" class="arrow-img arrow-right" />
@@ -60,18 +123,20 @@ const $router = useRouter()
   flex: 1;
   min-height: 0;
   padding: 0 8rem;
+  overflow-y: auto;
+}
+.list-box {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  overflow-y: auto;
 }
 
 .center-bread {
   position: relative;
   font-family: 'tx-Medium';
-  font-size: 32rpx;
+  font-size: 32rem;
   color: #FFFFFF;
-  line-height: 39rpx;
+  line-height: 39rem;
   padding-left: 24rem;
   background: url('../assets/expert/title-icon.png') no-repeat left center;
   background-size: 12rem 24rem;
