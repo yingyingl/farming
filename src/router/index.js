@@ -48,7 +48,7 @@ const routes = [
   }
 ]
 
-const whiteList = ['/index', '/manage'] // no redirect whitelist
+const whiteList = [] // no redirect whitelist
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

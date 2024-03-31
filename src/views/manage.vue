@@ -6,36 +6,38 @@
       <div class="center-main">
         <ul class="center-list list-left">
           <li class="_item1">
-            <h2 class="_name">标准化育种全流程监控</h2>
-            <h3 class="_desc">Full process monitoring of standardized breeding</h3>
+            <a :href="monitorUrl" target="_blank">
+              <h2 class="_name">标准化育种全流程监控</h2>
+              <h3 class="_desc">Full process monitoring of standardized breeding</h3>
+            </a>
           </li>
-          <li class="_item2">
+          <li class="_item2" @click="goNextPage(1)">
             <h2 class="_name">云会商中心</h2>
             <h3 class="_desc">Cloud Consultation Center</h3>
           </li>
-          <li class="_item3">
+          <li class="_item3" @click="goNextPage(2)">
             <h2 class="_name">育种体系繁育基地数据库</h2>
             <h3 class="_desc">Breeding system breeding base database</h3>
           </li>
-          <li class="_item4">
+          <li class="_item4" @click="goNextPage(3)">
             <h2 class="_name">品种数据库</h2>
             <h3 class="_desc">Variety database</h3>
           </li>
         </ul>
         <ul class="center-list list-right">
-          <li class="_item5">
+          <li class="_item5" @click="goNextPage(4)">
             <h2 class="_name">信息动态</h2>
             <h3 class="_desc">Information dynamics</h3>
           </li>
-          <li class="_item6">
+          <li class="_item6" @click="goNextPage(5)">
             <h2 class="_name">需求响应库</h2>
             <h3 class="_desc">Requirement Response Library</h3>
           </li>
-          <li class="_item7">
+          <li class="_item7" @click="goNextPage(6)">
             <h2 class="_name">科技成果库</h2>
             <h3 class="_desc">Science Technology Achievement Library</h3>
           </li>
-          <li class="_item8">
+          <li class="_item8" @click="goNextPage(7)">
             <h2 class="_name">专家智库</h2>
             <h3 class="_desc">Expert think tank</h3>
           </li>
@@ -50,9 +52,33 @@
 <script setup>
 import { useRoute, useRouter } from 'vue-router'
 
+const $route = useRoute()
 const $router = useRouter()
+let monitorUrl = 'http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_pxXkVHIkYd'
+ 
+if ($route.query.type == 3) {
+  monitorUrl = 'http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_4DrCdi0bxm'
+}
+if ($route.query.type == 4) {
+  monitorUrl = 'http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_hSy2Yq2Wcv'
+}
 
 
+
+const goNextPage = (type) => {
+  let url = ''
+  if (type === 1) {
+    url = 'meeting'
+  } else if (type === 7) {
+    url = '/expert'
+  } else {
+    url = '/list'
+  }
+
+  $router.push({
+    path: `${url}?type=${type}`
+  })
+}
 
 </script>
 

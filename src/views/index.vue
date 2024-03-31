@@ -5,11 +5,11 @@
 
       <div class="center-main">
         <div class="center-left">
-          <div class="center-menu left-top" @mouseover="hoverMenu(1)">
+          <div class="center-menu left-top" @mouseover="hoverMenu(1)" @click="goNextPage(1)">
             <h2 class="center-menu-title">旱碱麦育种体系<br/>联合创新中心管理系统</h2>
             <h3 class="center-menu-desc">Drought alkali wheat breeding system Joint<br/> Innovation Center Management System</h3>
           </div>
-          <div class="center-menu left-bottom" @mouseover="hoverMenu(3)">
+          <div class="center-menu left-bottom" @mouseover="hoverMenu(3)" @click="goNextPage(3)">
             <h2 class="center-menu-title">旱碱麦<br/>种植中心管理系统</h2>
             <h3 class="center-menu-desc">Drought alkali wheatPlanting Center<br/> Management System</h3>
           </div>
@@ -29,11 +29,11 @@
         </div>
 
         <div class="center-right">
-          <div class="center-menu right-top" @mouseover="hoverMenu(2)">
+          <div class="center-menu right-top" @mouseover="hoverMenu(2)" @click="goNextPage(2)">
             <h2 class="center-menu-title">旱碱麦<br/>推广中心管理系统</h2>
             <h3 class="center-menu-desc">Management system for drought alkali<br/> wheat promotion center</h3>
           </div>
-          <div class="center-menu right-bottom" @mouseover="hoverMenu(4)">
+          <div class="center-menu right-bottom" @mouseover="hoverMenu(4)" @click="goNextPage(4)">
             <h2 class="center-menu-title">旱碱麦加工体系<br/>联合创新中心管理系统</h2>
             <h3 class="center-menu-desc">Dry alkali wheat processing systemJoint<br/> Innovation Center Management System</h3>
           </div>
@@ -55,6 +55,15 @@ const hoverMenu = (type) => {
   menuType.value = type
 }
 
+
+/**
+ * @desc 跳转
+*/
+const goNextPage = (type) => {
+  $router.push({
+    path: '/manage?type=' + type
+  })
+}
 
 </script>
 

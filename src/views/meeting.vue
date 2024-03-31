@@ -39,7 +39,7 @@
           <el-table-column label="操作">
             <template #default="{ row }">
               <div class="btn-box">
-                <span class="_btn">预约会议</span>
+                <span class="_btn" @click="showModalHandle(true)">预约会议</span>
                 <span class="_btn">立即加入</span>
               </div>
             </template>
@@ -57,7 +57,7 @@
 
     <!-- 预约会议 -->
     <div class="meeting-form-modal" v-if="showModal">
-      <div class="_mask"></div>
+      <div class="_mask" @click="showModalHandle(false)"></div>
       <div class="_content">
         <img src="../assets/metting/create-title.png" class="__tit"  />
         <div class="flex1">
@@ -78,7 +78,7 @@
           </div>
         </div>
 
-        <img src="../assets/metting/create-btn.png" class="m-auto create-btn"  />
+        <img src="../assets/metting/create-btn.png" class="m-auto create-btn" @click="showModalHandle(false)"  />
       </div>
     </div>
   </section>
