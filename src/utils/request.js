@@ -3,7 +3,6 @@
 */
 import axios from 'axios'
 import qs from 'qs'
-import * as utils from '@/utils/utils'
 
 // create an axios instance
 const request = axios.create({
@@ -50,33 +49,11 @@ request.interceptors.response.use(
     const res = response.data
     // console.log(res)
     if (res.code !== 0) {
-      if (utils.getToken()) {
-        // Message({
-        //   message: res.message || 'Error',
-        //   type: 'error',
-        //   duration: 5 * 1000
-        // })
-
-        // 50008: Illegal token; 50012: Other clients logged in; 50014: Token expired;
+      if (localStorage.getItem('adminToken')) {
         if (res.code === 4 || res.code === 10) {
-          // to re-login
-          // MessageBox.confirm('您的登录已过期, 请重新登录',
-          // '登录已过期', {
-          //   confirmButtonText: '确定',
-          //   type: 'warning',
-          //   showCancelButton: false
-          // }).then(() => {
-          //   store.dispatch('user/resetToken').then(() => {
-          //     location.reload()
-          //   })
-          // }).catch(() => {
-          //   store.dispatch('user/resetToken').then(() => {
-          //     location.reload()
-          //   })
-          // })
+
         }
       }
-      // return Promise.reject(new Error(res.message || 'Error'))
       return res
     } else {
       return res
@@ -84,12 +61,6 @@ request.interceptors.response.use(
   },
   error => {
     console.log('err' + error) // for debug
-    // Message({
-    //   message: error.message,
-    //   type: 'error',
-    //   duration: 5 * 1000
-    // })
-
     return Promise.reject(error)
   }
 )
