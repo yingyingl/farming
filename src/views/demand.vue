@@ -1,7 +1,7 @@
 <template>
   <section class="expert-container">
     <div class="max-width m-auto w-p-100 flex-center m-b-20 m-t-40">
-      <div class="center-bread flex1">需求响应库</div>
+      <div class="center-bread flex1">技术服务</div>
 
       <div class="search-box">
         <img src="../assets/artical/search.png" class="_search" />

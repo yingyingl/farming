@@ -1,6 +1,11 @@
 <template>
   <section class="manage-container">
     <div class="max-width m-auto home-main-bg" :class="'home-main-bg' + sort"></div>
+
+    <div class="max-width m-auto w-p-100 relative" style="z-index: 2;">
+      <div class="center-bread">{{ nowTitle }}</div>
+    </div>
+
     <div class="max-width m-auto home-main">
       <img src="../assets/home/center-left.png" class="arrow-img arrow-left" />
 
@@ -54,7 +59,7 @@ if (sort == 1) {
   listLeft.value = [
     {
       id: 1,
-      name: '标准化育种全流程监控',
+      name: '育种全流程监测',
       enName: 'Full process monitoring of standardized breeding',
       url: 'http://182.92.115.164:8001/#/bigscreen/preview?code=bigScreen_pxXkVHIkYd',
       link: 1
@@ -91,7 +96,7 @@ if (sort == 1) {
     },
     {
       id: 6,
-      name: '需求响应库',
+      name: '技术服务',
       enName: 'Requirement Response Library',
       url: '/demand',
       link: 0
@@ -162,7 +167,7 @@ if (sort == 2) {
     },
     {
       id: 6,
-      name: '需求响应库',
+      name: '技术服务',
       enName: 'Requirement Response Library',
       url: '/demand',
       link: 0
@@ -221,7 +226,7 @@ if (sort == 3) {
     },
     {
       id: 6,
-      name: '需求响应库',
+      name: '技术服务',
       enName: 'Requirement Response Library',
       url: '/demand',
       link: 0
@@ -285,7 +290,7 @@ if (sort == 4) {
     },
     {
       id: 6,
-      name: '需求响应库',
+      name: '技术服务',
       enName: 'Requirement Response Library',
       url: '/demand',
       link: 0
@@ -306,6 +311,25 @@ if (sort == 4) {
     }
   ]
 }
+
+
+
+const nowTitle = ref('旱碱麦育种体系联合创新中心管理系统')
+
+const titleHandle = () => {
+  const sort = $route.query.sort
+
+  if (sort == 2) {
+    nowTitle.value = '旱碱麦推广中心管理系统'
+  } else if (sort == 3) {
+    nowTitle.value = '旱碱麦种植中心管理系统'
+  } else if (sort == 4) {
+    nowTitle.value = '旱碱麦加工体系联合创新中心管理系统'
+  } else {
+    nowTitle.value = '旱碱麦育种体系联合创新中心管理系统'
+  }
+}
+titleHandle()
 
 
 
@@ -468,6 +492,18 @@ const goNextPage = (item) => {
   ._item5, ._item8 { margin-right: 74rem; }
 }
 
+
+.center-bread {
+  position: relative;
+  font-family: 'tx-Medium';
+  font-size: 32rem;
+  color: #FFFFFF;
+  line-height: 39rem;
+  padding-left: 24rem;
+  background: url('../assets/expert/title-icon.png') no-repeat left center;
+  background-size: 12rem 24rem;
+  margin: 60rem 60rem 30rem;
+}
 
 
 @media screen and (max-width: 767rem) {

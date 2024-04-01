@@ -6,8 +6,8 @@
       </div>
 
       <h1 class="logo-box">
-        <img src="../assets/logo.png" class="logo" />
-        <span class="title">{{ nowTitle }}</span>
+        <img src="../assets/home/logo.png" class="logo" />
+        <!--<span class="title">{{ nowTitle }}</span>-->
       </h1>
       <span class="header-ani"></span>
 
