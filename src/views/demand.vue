@@ -1,7 +1,7 @@
 <template>
   <section class="expert-container">
     <div class="max-width m-auto w-p-100 flex-center m-b-20 m-t-40">
-      <div class="center-bread flex1">需求响应库</div>
+      <div class="center-bread flex1">技术服务</div>
 
       <div class="search-box">
         <img src="../assets/artical/search.png" class="_search" />
@@ -13,19 +13,19 @@
       <img src="../assets/home/center-left.png" class="arrow-img arrow-left" />
 
       <div class="center-main">
-        <div class="list-box">
-          <div class="epxert-item" v-for="item in 10" :key="item" @click="goNextLink(1)">
-            <div class="img-box">
-              <img src="https://p1-q.mafengwo.net/s9/M00/DF/E4/wKgBs1gDDt6AKrTbABPsiRWqoFw41.jpeg" class="_img" />
-            </div>
+<!--        <div class="list-box">-->
+<!--          <div class="epxert-item" v-for="item in 10" :key="item" @click="goNextLink(1)">-->
+<!--            <div class="img-box">-->
+<!--              <img src="https://p1-q.mafengwo.net/s9/M00/DF/E4/wKgBs1gDDt6AKrTbABPsiRWqoFw41.jpeg" class="_img" />-->
+<!--            </div>-->
 
-            <div class="content-box">
-              <h2 class="_name">打败 Midjourney，这个 Google 大牛推出的 AI 产品凭什么弯道超车</h2>
-              <p class="_desc">在这片群雄割据的红海，头部被 Midjourney、DALL·E、Stable Diffusion 等占据，其余还能让人眼前一亮的产品并不多…</p>
-              <img src="../assets/artical/view-btn.png" class="_btn" />
-            </div>
-          </div>
-        </div>
+<!--            <div class="content-box">-->
+<!--              <h2 class="_name">打败 Midjourney，这个 Google 大牛推出的 AI 产品凭什么弯道超车</h2>-->
+<!--              <p class="_desc">在这片群雄割据的红海，头部被 Midjourney、DALL·E、Stable Diffusion 等占据，其余还能让人眼前一亮的产品并不多…</p>-->
+<!--              <img src="../assets/artical/view-btn.png" class="_btn" />-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
       </div>
 
       <img src="../assets/home/center-right.png" class="arrow-img arrow-right" />

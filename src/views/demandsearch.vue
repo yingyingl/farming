@@ -1,23 +1,21 @@
 <template>
   <section class="expert-container">
+    <!--
     <div class="max-width m-auto w-p-100">
       <div class="center-bread">需求检索</div>
     </div>
-
+-->
     <div class="max-width m-auto home-main">
       <img src="../assets/home/center-left.png" class="arrow-img arrow-left" />
 
       <div class="center-main">
-        <div class="epxert-item" v-for="item in 10" :key="item" @click="goNextLink(1)">
-          <div class="img-box">
-            <img src="https://p1-q.mafengwo.net/s9/M00/DF/E4/wKgBs1gDDt6AKrTbABPsiRWqoFw41.jpeg" class="_img" />
+        <div class="search-container">
+          <h2 class="_title">需求检索</h2>
+          <div class="search-box">
+            <img src="../assets/artical/search.png" class="_search" />
+            <input type="text" class="_input" placeholder="请输入搜索的内容" />
           </div>
-
-          <div class="content-box">
-            <h2 class="_name">打败 Midjourney，这个 Google 大牛推出的 AI 产品凭什么弯道超车</h2>
-            <p class="_desc">在这片群雄割据的红海，头部被 Midjourney、DALL·E、Stable Diffusion 等占据，其余还能让人眼前一亮的产品并不多…</p>
-            <img src="../assets/artical/view-btn.png" class="_btn" />
-          </div>
+          <img src="../assets/search-btn.png" class="_search-btn" />
         </div>
       </div>
 
@@ -63,8 +61,8 @@ const goNextLink = (type) => {
   min-height: 0;
   padding: 0 8rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   overflow-y: auto;
 }
 
@@ -135,6 +133,52 @@ const goNextLink = (type) => {
     cursor: pointer;
   }
 }
+
+.search-box {
+  width: 420rem;
+  height: 62rem;
+  box-shadow: inset 0px 0px 56rem 0px rgba(76,130,208,0.4);
+  clip-path: polygon(6% 0, 100% 0, 100% 70%, 94% 100%, 0 100%, 0 30%); /* 调整四个坐标点来设置缺角的形状 */
+  display: flex;
+  align-items: center;
+  padding: 0 24rem;
+
+  ._search {
+    width: 24rem;
+    height: 24rem;
+  }
+  ._input {
+    flex: 1;
+    font-size: 22rem;
+    height: 62rem;
+    padding-left: 14rem;
+    background: none;
+    color: #fff;
+  }
+}
+
+
+.search-container {
+  ._title {
+    font-size: 38rem;
+    font-family: 'tx-Medium';
+    background: -webkit-linear-gradient(top, #F7FFFF 0%, #A0DEF6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 4rem 0px rgba(160,222,246,.2);
+    margin-bottom: 40rem;
+    text-align: center;
+  }
+}
+
+._search-btn {
+  width: 233rem;
+  height: 67rem;
+  margin: 47rem auto 0;
+  display: block;
+}
+
+
 
 @media screen and (max-width: 767rem) {
  
