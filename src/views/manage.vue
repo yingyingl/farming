@@ -346,8 +346,6 @@ const goNextPage = (item) => {
   background: #0D1B31;
   display: flex;
   flex-direction: column;
-  min-height: 720rem;
-  max-height: 860rem;
 }
 .home-main-bg {
   position: absolute;
@@ -395,7 +393,7 @@ const goNextPage = (item) => {
 }
 
 .center-main {
-  min-height: 690rem;
+  min-height: 750rem;
   flex: 1;
   padding: 0 8rem;
   display: flex;
