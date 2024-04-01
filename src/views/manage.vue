@@ -1,5 +1,6 @@
 <template>
   <section class="manage-container">
+    <div class="max-width m-auto home-main-bg" :class="'home-main-bg' + sort"></div>
     <div class="max-width m-auto home-main">
       <img src="../assets/home/center-left.png" class="arrow-img arrow-left" />
 
@@ -316,6 +317,7 @@ const goNextPage = (item) => {
 
 <style scoped lang="less">
 .manage-container {
+  position: relative;
   flex: 1;
   background: #0D1B31;
   display: flex;
@@ -324,11 +326,44 @@ const goNextPage = (item) => {
   max-height: 860rem;
   justify-content: flex-end;
 }
+.home-main-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url('../assets/second/breeding-bg.jpg');
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(13,27,49,0.7);
+  }
+}
+.home-main-bg2 {
+  background-image: url('../assets/second/promotion-bg.png');
+}
+.home-main-bg3 {
+  background-image: url('../assets/second/plant-bg.png');
+}
+.home-main-bg4 {
+  background-image: url('../assets/second/jg-bg.jpg');
+}
 .home-main {
+  position: relative;
+  z-index: 10;
   width: 100%;
   display: flex;
   align-items: center;
-  background: #0D1B31;
   padding: 0 15rem 0;
 }
 .arrow-img {
@@ -355,6 +390,7 @@ const goNextPage = (item) => {
   justify-content: space-between;
 
   li {
+    min-width: 420rem;
     height: 114rem;
     background-repeat: no-repeat;
     background-size: auto 100%;
