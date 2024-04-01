@@ -348,7 +348,6 @@ const goNextPage = (item) => {
   flex-direction: column;
   min-height: 720rem;
   max-height: 860rem;
-  justify-content: flex-end;
 }
 .home-main-bg {
   position: absolute;
